@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.getElementById("copyright");
-    copyrightElement.innerHTML = `&copy; ${currentYear} Paral Dynamics`;
+    copyrightElement.innerHTML = `&copy; ${currentYear} Varde`;
 });
 
 document.addEventListener('DOMContentLoaded', function() {
