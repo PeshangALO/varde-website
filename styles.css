@@ -9,6 +9,7 @@
     border: 0;
 }
 
+
 /* Media Queries */
 @media (max-width: 768px) {
     .map-container {
@@ -44,7 +45,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #352761;
     color: white;
     padding: 10px 0;
     overflow: hidden;
@@ -58,11 +59,12 @@ header {
     max-height: 60px;
 }
 
+
 .logo {
     width: 100%;
     max-width: 450px;
     height: auto;
-    margin-bottom: 20px;
+
 }
 
 .header-logo {
@@ -289,7 +291,7 @@ address {
 }
 
 footer {
-    background-color: #333;
+    background-color: #352761;
     color: white;
     text-align: center;
     padding: 10px 0;
