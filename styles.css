@@ -1,0 +1,382 @@
+.map-container {
+    flex: 1;
+    margin-top: 50px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .map-container {
+        width: 100%;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .map-container iframe {
+        width: 400px; /* Original size for larger screens */
+        height: 300px; /* Original size for larger screens */
+    }
+}
+
+/* Other Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    max-height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 100px; /* Reduced size for smaller header */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Main Sections */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo-image {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+}
+
+.learn-more {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.blog {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.blog-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.blog-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.blog-image {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px;
+}
+
+.blog-description {
+    width: 45%;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+.blog-description h2 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.blog-date {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.blog-description p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.blog-description p:last-child {
+    margin-bottom: 0;
+}
+
+.partners {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.partner-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.mission-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.company-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.contact-info {
+    flex: 1;
+    margin-top: 50px;
+}
+
+.contact-info h1 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-info i.fas.fa-envelope {
+    margin-right: 10px;
+}
+
+.company-details {
+    margin-top: 20px;
+}
+
+.company-details p {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.company-details i {
+    margin-right: 10px;
+    color: #333;
+}
+
+address {
+    margin-top: 20px;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #ddd;
+}
+
+/* Ensure nav menu is clickable */
+nav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+    }
+
+    nav a {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + nav {
+        display: flex; /* Show the menu when active */
+    }
+
+    .blog-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-image,
+    .blog-description {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .partners-container {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .map-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .mission-logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .learn-more {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .blog-description h2 {
+        font-size: 1.2em;
+    }
+
+    .blog-description p {
+        font-size: 0.9em;
+    }
+
+    .contact-info h1 {
+        font-size: 1.5em;
+    }
+
+    .company-details p {
+        font-size: 1em;
+    }
+
+    address {
+        font-size: 1em;
+    }
+}

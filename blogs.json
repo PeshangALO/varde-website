@@ -1,0 +1,28 @@
+[
+    {
+        "image": "images/shark-tank-image.png",
+        "title": "Shark Tank",
+        "date": "March 28, 2023",
+        "description": "På \"Shark Tank\" arrangementet til UiA Nyskaping skilte Paral Dynamics seg ut. På en kveld full av flotte ideer, vant vår unike innovasjon dem to store priser - \"Beste Innovasjonshøyde\" og \"Publikums Favoritt\"."
+    },
+    {
+        "image": "images/arendal-uka.png",
+        "title": "Arendalsuka",
+        "date": "August 18, 2023",
+        "description": "På Arendalsuka belyste Rune Alexander Laursen om bedriftens spennende reise. Med bakgrunn i dataingeniørarbeid og kunstig intelligens, identifiserte vi mangler i verktøy for diabetesbehandling. Med utgangspunkt i Runes personlige erfaring med diabetes og vårt kombinerte teknologiske ekspertise, utviklet vi en unik algoritme som overgår eksisterende løsninger. Med støtte fra UiAs innovasjonsteam har vår innovasjon stort potensial for diabetesbehandling."
+    },
+    {
+        "image": "images/innovation-norway.png",
+        "title": "STUD-ENT tilskuddet fra Innovasjon Norge",
+        "date": "May 15, 2024",
+        "description": "Vi er glade for å kunne meddele at vi har blitt tildelt STUD-ENT-tilskudet fra Innovasjon Norge. Dette tilskuddet vil hjelpe oss å ta vårt innovative prosjekt til neste nivå. les mer om det <a href=\"https://www.uia.no/om-uia/fakultet/handelshoyskolen/aktuelt/to-millionar-til-studentbedrifter.html\" target=\"_blank\">her</a>."
+    },
+
+    {
+        "image": "images/gat.png",
+        "title": " Intervju med Grimstad Adressetidende",
+        "date": "September 20, 2023",
+        "description": "Vi hadde gleden av å bli intervjuet av Grimstad Adressetidende, hvor vi delte vår reise og de nye skrittene i utviklingen av vårt selskap. Med fokus på bruken av kunstig intelligens i våre produkter, diskuterte vi hvordan denne teknologien er en kjernekomponent i vår innovasjon og hvordan den kan revolusjonere industrier. Les intervjuet hos GAT <a href=\"https://www.gat.no/nyheter/i/4oAWK9/vil-bruke-kunstig-intelligens-i-behandling-av-diabetes\" target=\"_blank\">her</a> (krever plusstilgang)."
+    }
+]
+ 
