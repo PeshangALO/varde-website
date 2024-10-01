@@ -26,49 +26,48 @@
     },
 
     {
-        "image": "Lisboa.jpg",
+        "image": "images/Lisboa.jpg",
         "title": "Hult Prize",
         "date": "June 21, 2024",
         "description": "Gjennom en lokal konkurranse i regi av UiA vant vi plasser til den internasjonale startupkonkurransen Hult Prize. Konkurransen tok sted i Lisboa over 2 dager, fullspekket med kompetente gründere og revolusjonerende ideer. Varde nådde ikke til toppen, men teamet tok med seg hjem verdifulle erfaringer og nye internasjonale kontakter."
     },
 
     {
-        "image": "Rasmus.png",
+        "image": "images/Rasmus.png",
         "title": "Varde får inn ny kompetanse",
         "date": "February 1, 2024",
         "description": "Rasmus Nicolay Pripp er Varde sitt nyeste tilskudd og som CFO skal han være med på å bringe oss til nye økonomiske høyder. Med en bachelor i økonomi og administrasjon, og en master i SHIFT entreprenørskap og økonomi - Siviløkonom, vil han være en nøkkelbrikke for videre forretningsutvikling, økonomi, regnskap, finansiering og strategi. Vi ønsker Rasmus hjertelig velkommen!"
     },
 
     {
-        "image": "Sondre.png",
+        "image": "images/Sondre.png",
         "title": "Varde øker kompetansen ytterligere",
         "date": "February 10, 2024",
         "description": "Sondre Simensen Bergane har tiltrådt som CMO, og med sin relevante erfaring fra UIA Nyskaping vil han spille en sentral rolle i utviklingen av Varde. Sondre har en bachelorgrad i markedsføring og en mastergrad i SHIFT entreprenørskap, noe som ytterligere styrker hans betydningsfulle bidrag innen forretningsutvikling, nettverksbygging, promotering og strategi. Vi ønsker Sondre varmt velkommen!"
     },
 
     {
-        "image": "Team baerekraftig.png",
+        "image": "images/Team baerekraftig.png",
         "title": "Vinnere av bærekraftig forretningside konkurranse",
         "date": "September 19, 2024",
         "description": "Forrige uke var vi så heldige å være en av tre bedrifter som fikk konkurrere i årets Bærekraftig forretningsidé-konkurranse, i regi av DNB og Business Region Kristiansand. Der stakk vi av med seieren mot meget dyktige Robert Sach i Vigi Systems AS og Andreas Madsen i GADR AS. Pengene og ikke minst omtalene vi fikk som resultat av seieren er til stor hjelp, og gir teamet en skikkelig boost."
     },
 
     {
-        "image": "Academy.png",
+        "image": "images/Academy.png",
         "title": "Vinnere av gründerstipend 2023",
         "date": "December 5, 2023",
         "description": "Vi kan gledelig meddele at vi er vinnere av Gründerstipendet for 2023, arrangert av Gründer Academy og i regi av Innoventus Sør. Gjennom 4 eventer, 15 foredrag, 20+ mentormøter og 11 workshops har vi jobbet å forbedre pitch, strategi og utvikling. Fra over 1000 søkende bedrifter, var det mange gode bedrifter med fra hele Norge, og vi er svært fornøyd med å vinne beste bedrift Agder på demoday. Nå er det bare å forberede seg til den nasjonale finalen."
     },
-
     {
-        "image": "England.png",
+        "image": "images/England.png",
         "title": "Presentasjon av resultater fra masteroppgave i England",
         "date": "December 13, 2023",
         "description": "Etter at resultatene vi oppnådde gjennom masteroppgaven vår ble publisert, ble vi invitert til University of Cambridge i England for å presentere dem. Algoritmen vi lagde viste seg å være den beste i verden for å predikere glukosenivå hos personer med type 1 diabetes. Den internasjonale annerkjennelsen vi fikk her gir mersmak, og viser at verden er interessert i det vi skaper."
     },
 
     {
-        "image": "EXPO_crop.jpg",
+        "image": "images/EXPO_crop.jpg",
         "title": "Innvilgelse av regionalt næringsfond for Grimstad, Froland og Arendal",
         "date": "December 3, 2023",
         "description": "Vi er svært glade for å kunngjøre at vi har mottatt innvilgelse fra det regionale næringsfondet for Grimstad, Froland og Arendal. Denne støtten gir oss verdifulle ressurser til å videreutvikle prosjektet Varde og få ekstern ekspertise til prosessene fremover."
