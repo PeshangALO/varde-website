@@ -167,7 +167,9 @@ nav a {
 .blog-image {
     width: 45%;
     max-width: 400px;
-    height: auto;
+    height: 300px; /* Set the desired height */
+    object-fit: cover; /* Crop the image from top and bottom */
+    object-position: center; /* Center the image */
     margin: 20px;
 }
 
