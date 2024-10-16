@@ -1,22 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('nav a');
-
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('blogs.json')
+    fetch('./json/blogs.json')
         .then(response => response.json())
         .then(data => {
             // Sort the data by date in descending order
@@ -38,18 +21,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 const blogTitle = document.createElement('h2');
                 blogTitle.textContent = blog.title;
 
-                const blogDate = document.createElement('p');
+
+                const blogDate = document.createElement('h6');
                 blogDate.classList.add('blog-date');
                 blogDate.textContent = new Date(blog.date).toLocaleDateString('en-US', {
                     year: 'numeric', month: 'long', day: 'numeric'
+        
                 });
 
                 const blogText = document.createElement('p');
                 blogText.innerHTML = blog.description;
 
                 blogDescription.appendChild(blogTitle);
-                blogDescription.appendChild(blogDate);
                 blogDescription.appendChild(blogText);
+                blogDescription.appendChild(blogDate);
 
                 blogItem.appendChild(blogImage);
                 blogItem.appendChild(blogDescription);
@@ -57,20 +42,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 blogContainer.appendChild(blogItem);
             });
         })
-        .catch(error => console.error('Error fetching blog data:', error));
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const currentYear = new Date().getFullYear();
-    const copyrightElement = document.getElementById("copyright");
-    copyrightElement.innerHTML = `&copy; ${currentYear} Varde `;
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
-
-    mobileMenu.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
+        .catch(error => console.log('Error fetching blog data:', error));
 });
