@@ -1,0 +1,26 @@
+[
+    {
+        "image": "images/Sondre.png",
+        "teamMember": "Sondre Simensen Bergane",
+        "position": "CMO",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+    },
+    {
+        "image": "images/Rasmus.jpeg",
+        "teamMember": "Rasmus Nicolay Pripp",
+        "position": "CFO",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+    },
+    {
+        "image": "images/Sondre.png",
+        "teamMember": "Alexander Rune Laursen",
+        "position": "Founder",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+    },
+    {
+        "image": "images/Rasmus.jpeg",
+        "teamMember": "Rasmus Nicolay Pripp",
+        "position": "Founder",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+    }
+]
