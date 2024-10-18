@@ -38,12 +38,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const navLogo = `images/varde-logo-white.png`
 
     const navHTML = `
-           <a href="./index.html"> <img src= ${navLogo} class="header-logo"/></a> 
-           <ul>
-                <li><a href="#about-us">About   </a></li>
+           
+            <div>
+                <a href="./index.html"> 
+                <img src= ${navLogo} class="header-logo"/>
+            </a>
+            </div>
+
+           <ul>    
+                <li><a href="./about-varde.html">About   </a></li>
                 <li><a href="#the-team">The Team</a></li>
                 <li><a href="#latest-blog">Blog    </a></li>
-                <li><a href="#contact">Contact </a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
     `;
     const navElement = document.getElementById("nav-container");

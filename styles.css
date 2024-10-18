@@ -1,7 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /* Other Styles */
 html{
     scroll-behavior: smooth;
+}
+
+html, body {
     overflow-x: hidden;
 }
 
@@ -11,6 +19,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
 .young-serif{
@@ -39,21 +48,6 @@ a{
     color: white;
 }
 
-ul{
-    font-family: var(--koho);
-    font-weight: normal;
-    font-size: 24px;
-    list-style: none;
-    display: flex;
-   
-    gap: 4rem;
-    margin: 1rem 3rem 1rem 0;
-}
-
-li:hover{
-    font-weight: bold;
-}
-
 
 nav{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
@@ -77,14 +71,30 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    overflow: hidden;
-    top: 0;
+    overflow-x: hidden;
     width: 100%;
     background-color: rgba(16, 24, 40, 1);
+    z-index: 9999;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+ul{
+    font-family: var(--koho);
+    font-weight: normal;
+    font-size: 24px;
+    display: flex;
+    gap: 4rem;
+}
+
+li{
+    display: flex;
+}
+
+li:hover{
+    font-weight: bold;
 }
 
 .header-logo {
-    margin-left: 3rem;
     max-width: 7rem; /* Reduced size for smaller header */
 }
 
@@ -96,38 +106,38 @@ nav{
 }
 
 
+
+
+@media(max-width: 767px){
+    nav{
+        flex-direction: column;
+    }
+}
 /*------------------------------------*/
 /*----------HERO SECTION--------------*/
 /*------------------------------------*/
 
 .hero {
     display: flex;               
-    justify-content: center;     
-    align-items: flex-start;         
-    height:75vh;      
-    margin: 5rem 0 0 0;                           
+    justify-content: center;            
+    margin-top: 10rem;                               
 }
 
 .hero-content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 20rem; 
     grid-template-rows: auto 1fr;  
     align-items: center;            
     justify-content: center;        
-    gap: 5rem;                      
-    max-width: 1200px;              
-    margin-top: 5rem;
+    gap: 5rem;                                 
 }
 
-.logo-wrapper{
-    width: 90vw;
-}
 
 .logo {
     max-width: 45rem;
     grid-column: 1;
     grid-row: 1;
-    margin-left: -5rem;
+    margin-left: -10rem;
 }
 
 .hero-text-container {
@@ -136,6 +146,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-left: 8rem;
 }
 
 .app-demo-pic {
@@ -179,16 +190,49 @@ nav{
 }
 
 .hero-container {
-    max-width: 50rem;
     margin-top: 2rem;
 }
 
-.logo-image {
-    width: 60%;
-    max-width: 600px;
-    height: auto;
-}
+@media (max-width: 767px){
 
+
+
+    .hero-content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .logo-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo{
+        max-width: 35rem;
+        margin: 0 auto;
+    }
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .title-text{
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .coming-soon{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    .button-container{
+        align-self: center;
+    }
+
+}
 
 /*------------------------------------*/
 /*----------ABOUT SECTION-------------*/
@@ -196,12 +240,12 @@ nav{
 .section-divider img {
     display: block; /* Ensures no extra space below the image */
     line-height: 0; 
-width: 100%;
+    width: 100%;
 }
 
 #about-us{
     padding-top: 5rem;
-    height: 90vh;
+    padding: 5rem 0 5rem 0;
     margin: 0;
     background: linear-gradient(to bottom, rgba(51, 40, 94, 1), rgba(69, 49, 148, 1));
 }
@@ -258,6 +302,39 @@ width: 100%;
     margin-top: 0;
 }
 
+
+@media(max-width: 767px){
+    .about-content-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-us{
+        padding: 3rem 0 3rem 0;
+    }
+
+    .about-us-header-wrapper{
+        margin-left: 1rem;
+        display: inline-block;
+    }
+
+    .about-us-header-wrapper > p {
+        font-size: 1rem;
+        text-align: start;
+    }
+    .section-description{
+        max-width: 30rem;
+    }
+
+    .about-text-container > h3{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about-text-container > p {
+        font-size: 1rem;
+    }
+
+}
 
 
 /*------------------------------------*/
@@ -323,7 +400,31 @@ width: 100%;
     margin: 0;
 }
 
+@media(max-width: 767px){
+    .the-team-header-wrapper{
+        margin-left: 1rem;
+        max-width: 30rem;
+    }
 
+    .the-team-header-wrapper > p{
+        margin-left: 0;
+    }
+
+    .employee-img{
+        width: 10rem;
+        height: 10rem;
+    }
+
+    #team-members{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .section-description{
+        font-size: 1rem;
+    }
+}
 
 /*------------------------------------*/
 /*-------------BLOG-SECTION-----------*/
@@ -370,7 +471,6 @@ width: 100%;
     display: flex;
     margin-bottom: 6rem;
     gap: 2rem;
-    height: 250px;
     border-radius: 20px;
     padding: 20px;
     background-color: rgba(222, 246, 246, 1);
@@ -431,6 +531,21 @@ width: 100%;
     font-family: var(--koho);
     font-weight: 600;
     margin-bottom: 5rem;
+}
+
+@media(max-width: 767px){
+    .latest-blog-item{
+        flex-direction: column;
+    }
+
+    .latest-blog-date{
+        justify-content: flex-start;
+    }
+
+    .latest-blog-container > h4{
+        align-self: flex-start;
+    }
+
 }
 
 
@@ -518,20 +633,18 @@ width: 100%;
 .partners {
     padding: 50px 20px;
     background-color: #f0f0f0;
-    text-align: center;
 }
 
 .partners-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+
     gap: 20px;
 }
 
 .partner-logo {
     max-width: 150px;
-    height: auto;
 }
 
 /*------------------------------------*/
@@ -539,6 +652,8 @@ width: 100%;
 /*------------------------------------*/
 
 #contact {
+    z-index: 2;
+    position: relative;
     padding: 50px 20px;
     background-color: #f9f9f9;
     display: flex;
@@ -551,7 +666,6 @@ width: 100%;
     justify-content: space-evenly;
     align-items: center; 
     gap: 2rem; 
-    width: 100%; /* Full width */
 }
 
 .contact-info{
@@ -578,37 +692,6 @@ width: 100%;
     margin-right: 10px;
     color: #000000;
 }
-
-
-
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .map-container {
-        width: 100%;
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-    }
-
-    .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-@media (min-width: 769px) {
-    .map-container iframe {
-        width: 400px; /* Original size for larger screens */
-        height: 300px; /* Original size for larger screens */
-    }
-}
-
 
 
 
@@ -647,34 +730,12 @@ nav.active {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-        display: none; /* Hide the menu by default */
-    }
-
-    nav a {
-        margin: 10px 0;
-        margin-left: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle.active + nav {
-        display: flex; /* Show the menu when active */
-    }
+@media (max-width: 767px) {
 
     .blog-item {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     .blog-image,
@@ -685,26 +746,12 @@ nav.active {
         padding: 0 10px;
     }
 
-    .partners-container {
-        flex-direction: column;
-    }
-
     .contact-container {
         flex-direction: column;
+        width: auto;
     }
 
-    .contact-info,
-    .map-container {
-        width: 100%;
-        margin-top: 20px;
-    }
 
-    .mission-logo {
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-bottom: 20px;
-    }
 }
 
 @media (max-width: 480px) {
