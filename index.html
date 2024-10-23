@@ -2,77 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Varde</title>
-    <link rel="stylesheet" href="styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">  <!-- Increment if style is updated to forc hard refreach -->
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header calss = "header-color">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/varde-logo-white.png" class="header-logo">
-            </div>
-            <nav id="nav-menu">
-                <a href="#home">HJEMMESIDE</a>
-                <a href="#blog">BLOGG</a>
-                <a href="#contact">KONTAKT</a>
-            </nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+    <header class="header-color">
+            <nav id="nav-container"></nav>
+            <nav id="hamburger-menu"></nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <div class="container">
-                <img src="images/varde-logo.png" alt="Varde Logo" class="logo">
-                <h1 class="title">Next-gen Diabetes Wellness</h1>
-                <p class="coming-soon">Coming soon ...</p>
-                <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button">Become a beta user</a>
-            </div>
-        </section>
-        
-        <section id="blog" class="blog">
-            <div id="blog-container"></div>
-        </section>
-
-        <section id="partners" class="partners">
-            <div class="partners-container">
-                <a href="https://www.innovasjonnorge.no" target="_blank">
-                    <img src="images/IN_Logo_Eng.png" alt="Partner 1 Logo" class="partner-logo">
-                </a>
-                <a href="https://www.innoventussor.no" target="_blank">
-                    <img src="images/L-Innoventus_sor_CMYK.png" alt="Partner 2 Logo" class="partner-logo">
-                </a>
-                <a href="https://uia.no" target="_blank">
-                    <img src="images/logoUiA.png" alt="Partner 3 Logo" class="partner-logo">
-                </a>
-                <!-- Add more partner logos as needed -->
-            </div>
-        </section>
-        
-        <section id="contact" class="contact">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h1>Kontakt oss</h1>
-                    <div></div>
-                    <div class="company-details">
-                        <p><i class="fas fa-envelope"></i> sondre@varde.ai</p>
-                        <p><i class="fas fa-building"></i> Org nr: 930 793 272</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Adresse: Gimlemoen 15, 4630 Kristiansand</p>
+            <div class="hero-content-wrapper">
+                <div class="hero-container">
+                        <div class="logo-wrapper">
+                            <img src="images/varde-logo.png" alt="Varde Logo" class="logo" loading="lazy">
+                        </div>
+                    <div class="hero-text-container">
+                        <h1 class="title title-text">Next-gen Diabetes Wellness</h1>
+                        <p class="coming-soon title-text">Coming soon ...</p>
                     </div>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.401076394078!2d7.986608642502217!3d58.14671079463462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463803b6a74d5b77%3A0xf68764043242d98!2sParal%20Dynamics!5e0!3m2!1sen!2sno!4v1685201234567!5m2!1sen!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="button-container">
+                        <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button">Become a beta user</a>
+                    </div>
+                    <img class="app-demo-pic" src="images/hero-iphone.png" alt="Varde app on iPhone" loading="lazy"/>
+                </div>
+            </section>
+            <div class="section-divider">
+                <img src="section-dividers/about-us-top-divider.svg" loading="lazy"/>
+            </div>    
+
+            <section id="about-us" class="about">
+                <div class="about-us-header-wrapper">
+                    <h2 class="section-title">About us</h2>
+                    <p class="section-description">Varde AS is an innovative tech company specializing in developing explainable AI solutions to empower people with diabetes. 
+                        Our team combines deep expertise in AI and personal experience with diabetes to create cutting-edge technology. </p>
+                </div>
+            
+                <div class="about-content-container">
+                    <div class="about-us-text-wrapper">
+                        <p class="about-us-number">1</p>
+                            <div class="about-text-container">
+                        <h3>Our Goal</h3>
+                        <p>We aim to reduce illness and improve the quality of life for all people with diabetes by providing intelligent, 
+                            user-friendly tools that enable better control and management of their condition.</p>
+                            </div>
+                    </div>
+            
+                    <div class="about-us-text-wrapper">
+                        <p class="about-us-number">2</p>
+                            <div class="about-text-container">
+                        <h3>What is Varde?</h3>
+                        <p>We've developed an AI algorithm that predicts glucose levels and explains its insulin adjustment recommendations. By integrating 42 factors, our solution provides personalized insights,
+                             empowering users to manage diabetes more confidently through an intuitive app.</p>
+                            </div>
+                    </div>
+                </div>
+                <div>
+
+                    <div class="learn-more-button">
+                        <a href="./about-varde.html" class="beta-button">Learn more about us</a>
+                    </div>
+
+            </section>
+
+            <div class="section-divider">
+                <img src="section-dividers/about-us-bottom-divider.svg" loading="lazy">
+            </div>
+        
+        <section id="the-team" class="team">
+                <div class="the-team-header-wrapper">
+                    <h2 class="section-title">The Team</h2>
+                    <p class="section-description">
+                        Varde Tech AS combines a multidisciplinary 
+                        team to realize its vision of improving diabetes management through innovative AI solutions.
+                    </p>
+                </div>
+        
+                <div id="team-members">
+                </div>
+        </section>
+        <div class="section-divider latest-blog-divider">
+            <img src="section-dividers/the-team-bottom-divider.svg" loading="lazy">
+        </div>
+    
+        <section id="latest-blog">
+            <div class="blog-header-wrapper">
+                <h2 class="section-title">Blog</h2>
+                <p class="section-description">Read our blog-snippets for info about recent activities, progress and successes!
+                </p>
+            </div>
+        
+        <div class="latest-blog-container">
+            <h4>Latest update</h4>
+            <div id="latest-blog-wrapper"></div>
+        </div>
+        
+        <a href="blog.html"id="read-blog-button">Read more</a> 
+        </section>
+       
+    <section id="partners" class="partners">
+        <div class="partners-container">
+            <a href="https://www.innovasjonnorge.no" target="_blank">
+                <img src="images/IN_Logo_Eng.png" alt="Partner 1 Logo" class="partner-logo">
+            </a>
+            <a href="https://www.innoventussor.no" target="_blank">
+                <img src="images/L-Innoventus_sor_CMYK.png" alt="Partner 2 Logo" class="partner-logo">
+            </a>
+            <a href="https://uia.no" target="_blank">
+                <img src="images/logoUiA.png" alt="Partner 3 Logo" class="partner-logo">
+            </a>
+        </div>
+    </section> 
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Contact us</h1>
+                <div></div>
+                <div class="company-details">
+                    <p><i class="fas fa-envelope"></i> sondre@varde.ai</p>
+                    <p><i class="fas fa-building"></i> Org nr: 930 793 272</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Adress: Gimlemoen 15, 4630 Kristiansand</p>
                 </div>
             </div>
-        </section>        
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.401076394078!2d7.986608642502217!3d58.14671079463462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463803b6a74d5b77%3A0xf68764043242d98!2sParal%20Dynamics!5e0!3m2!1sen!2sno!4v1685201234567!5m2!1sen!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>  
     </main>
-
     <footer>
         <div class="social-media">
             <a href="https://www.linkedin.com/company/varde" target="_blank" class="social-link">
@@ -82,6 +147,10 @@
         <p id="copyright"></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./scripts/indexScripts.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <script src="./scripts/hamburgerMenu.js"></script>
+
 </body>
 </html>

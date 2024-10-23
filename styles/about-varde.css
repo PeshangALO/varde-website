@@ -1,0 +1,590 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --young-serif: "Young Serif", serif;
+    --mooli: "Mooli", serif;
+    --montes: "Montserrat Alternates", serif;
+    --koho: "KoHo", serif;
+    --karma: "Karma", serif;
+    --kant-pro: "Kantumruy Pro", serif;
+}
+
+#about-hero-section{
+    background: linear-gradient(to top, rgba(51, 40, 94, 1), rgba(69, 49, 148, 1));
+    height: 1000px;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+#about-title-wrapper{
+    display: grid;
+    grid-template-columns: 40rem;
+    grid-template-rows: 3rem 10rem 3rem;
+    margin:0 0 0 20rem;
+    z-index: 2;
+}
+
+#about-title-wrapper > img{
+    place-self: center;
+}
+
+#title-start{
+    place-self: start;
+}
+
+#title-end{
+    place-self: end;
+}
+
+#about-title-wrapper > h1{
+    font-family: var(--kant-pro);
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.varde-transparent-logo{
+    position: absolute;
+    overflow-x: hidden;
+    right: -10rem;
+    max-width: 55rem;
+    z-index: 1;
+}
+
+
+@media(max-width: 1500px){
+    #about-title-wrapper{
+        margin-left: 8rem;
+    }
+}
+
+@media(max-width: 1300px){
+    .varde-transparent-logo{
+        opacity: 0.5;
+    }
+}
+
+@media(max-width: 767px){
+    #about-title-wrapper{
+        margin-left: 2rem;
+    }
+
+    .varde-transparent-logo{
+        opacity: 0.2;
+        right: 0;
+    }
+
+}
+
+/*------------------------------------------------*/
+/*------------------INFORMATION-------------------*/
+/*------------------------------------------------*/
+
+#the-problem-section{
+    padding-top: 2rem;
+    background: #E7E7E7;
+    color: rgba(53, 39, 97, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#the-problem-section > h2{
+    font-family: var(--young-serif);
+    font-size: 5rem;
+}
+
+#the-problem-section > h6 {
+    font-family: var(--kant-pro);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.percentage-world-pop-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.statement-wrapper{
+    font-family: var(--kant-pro);
+    max-width: 50rem;
+    text-align: end;
+    margin-top: 3.5rem;
+}
+.statement-wrapper > h6{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.percentage-wrapper{
+    font-family: var(--montes);
+    font-size: 10rem;
+}
+
+@media(max-width: 767px){
+    .statement-wrapper{
+        margin-top: 2.5rem;
+    }
+
+    #the-problem-section > h6{
+        text-align: center;
+    }
+
+    .percentage-world-pop-wrapper{
+        margin-right: 2rem;
+    }
+
+    .statement-wrapper > h6{
+        text-align: end;
+        font-size: 1.5rem;
+    }
+
+    .percentage-wrapper{
+        font-size: 7rem;
+    }
+}
+@media(max-width: 667px){
+
+#about-hero-section{
+    justify-content: center;
+}
+
+#about-title-wrapper{
+    grid-template-rows: 3rem 5rem 3rem;
+    grid-template-columns: 20rem;
+    margin: 0;
+}
+
+    #about-title-wrapper > img {
+    max-width: 20rem;
+    }
+}
+
+
+
+@media(max-width: 350px){
+    #about-title-wrapper{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #about-title-wrapper > img{
+        max-width: 17rem;
+    }
+
+    #about-title-wrapper > h1{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+    #about-hero-section{
+        height: 60vh;
+    }
+}
+/*------------------------------------------------*/
+/*----------------COMMON SYMPTOMS-----------------*/
+/*------------------------------------------------*/
+
+#common-symptoms-section{
+    background: rgba(53, 39, 97, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#all-symptoms{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    font-family: var(--karma);
+    font-size: 1.5rem;
+    row-gap: 4rem;
+    column-gap: 4rem;
+}
+
+.symptom-header{
+    font-family: var(--kant-pro);
+    margin: 6rem 0 2rem 0;
+}
+
+.symptom-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    max-width: 25rem;
+}
+
+.symptom-wrapper h5 {
+    margin: 0; 
+    word-wrap: break-word; 
+}
+
+.symptom-wrapper h5 {
+    max-width: 12rem; /* Set a max width to trigger text wrapping */
+}
+
+
+.symptom-wrapper > img{
+    max-width: 7rem;
+}
+
+.symptom-text-wrapper{
+    width: 12rem;
+}
+
+
+.left-column{
+    flex-direction: row-reverse;
+}
+
+#common-symptoms-section > h3{
+    font-family: var(--kant-pro);
+    font-weight: 300;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.final-statement-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.final-statement-wrapper > h4{
+    margin-top: 3rem;
+    font-family: var(--kant-pro);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.final-statement-wrapper > h3{
+    font-family: var(--karma);
+    font-weight: 300;
+    font-size: 2rem;
+    font-size: 1.5rem;
+}
+
+.uphill-battle-img{
+    margin-top: -3rem;
+    width: 20rem;
+}
+
+
+.solution-divider{
+    background: rgba(53, 39, 97, 1);
+}
+
+@media(max-width: 767px){
+    .solution-divider{
+        width: 50rem;
+    }
+
+    .final-statement-wrapper{
+        text-align: center;
+    }
+
+    #common-symptoms-section > h3{
+        text-align: center;
+    }
+}
+
+@media(max-width: 656px){
+    .symptom-wrapper{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 510px){
+    #the-problem-section > h2{
+        font-size: 4rem;
+    }
+
+    #the-problem-section > h6{
+        font-size: 2rem;
+    }
+
+    .statement-wrapper{
+        margin-top: 1rem;
+    }
+
+
+}
+
+@media(max-width: 400px){
+
+    #the-problem-section > h2{
+        font-size: 3rem;
+    }
+
+    
+    #the-problem-section > h6{
+        font-size: 2rem;
+    }
+
+    .statement-wrapper > h6{
+        text-align: center;
+    }
+
+    .percentage-world-pop-wrapper{
+        gap: 0;
+        text-align: center;
+        margin: 0 0.5rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #all-symptoms{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .symptom-wrapper{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .left-column{
+        flex-direction: row-reverse;
+    }
+
+    .final-statement-wrapper{
+        gap: 2rem;
+        margin: 0 0.5rem;
+    }
+
+}
+
+
+/*------------------------------------------------*/
+/*------------------SOLUTION----------------------*/
+/*------------------------------------------------*/
+
+#our-solution{
+    background: linear-gradient(to bottom, rgba(59, 89, 194, 1), rgba(78, 117, 255, 1));
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: -1;
+}
+
+.our-solution-header-wrapper{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+    margin-bottom: 10rem;
+}
+
+.our-solution-header-wrapper > img{
+    max-width: 5rem;
+}
+
+.our-solution-header-wrapper > h2{
+    color: white;
+    font-size: 4rem;
+}
+
+#the-solutions-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.solution-wrapper > img{
+    max-width: 95rem;
+}
+
+.solution-title-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.solution-text-wrapper{
+    color:white;
+    max-width: 50rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.place-text-midd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.solution-number{
+    font-family: var(--montes);
+    font-size: 10rem;
+    box-sizing: content-box;
+}
+
+.solution-step-title{
+    font-family: var(--kant-pro);
+    font-size: 5rem;
+    align-self: flex-end;
+    margin-bottom: 1.3rem;
+}
+
+.solution-description-wrapper{
+    font-family: var(--karma);
+    font-size: 1.5rem;
+}
+
+#beta-user-button{
+    justify-content: center;
+    margin-top: 5rem;
+    z-index: 1;
+}
+
+#bottom-logo{
+    position:absolute;
+    right: -10rem;
+    bottom: -10rem;
+    overflow-x: hidden;
+}
+
+#bottom-logo > img{
+    max-width: 50rem;
+}
+
+
+@media(max-width: 1300px){
+    #bottom-logo{
+        opacity: 0.5;
+    }
+}
+
+
+@media(max-width: 1250px){
+    .solution-number{
+        font-size: 7rem;
+    }
+    .solution-step-title{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .solution-wrapper{
+        gap: 1rem;
+    }
+    
+    .solution-wrapper > img {
+        max-width: 20rem;
+        z-index: 2;
+    }
+
+}
+
+@media(max-width: 840px){
+
+    .our-solution-header-wrapper{
+        padding-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+
+
+    .solution-title-container{
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    
+    .solution-wrapper{
+        gap: 0;
+    }
+
+    .solution-number{
+        font-size: 4rem;
+    }
+
+    .solution-step-title{
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #bottom-logo{
+        bottom: -15rem;
+    }
+
+}
+
+@media(max-width: 680px){
+/*     .solution-text-wrapper{
+        margin: 0;
+    } */
+
+.our-solution-header-wrapper > h2{
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.solution-step-title{
+    margin-bottom: 0.2rem;
+}
+
+#the-solutions-container{
+    gap: 5rem;
+}
+
+.solution-wrapper{
+    flex-direction: column;
+    align-items: center;
+}
+
+.reversed-solution{
+    flex-direction: column-reverse;
+}
+.reversed-solution > img {
+    max-width: 17rem;
+}
+
+#bottom-logo{
+    right: -5rem;
+}
+
+#bottom-logo > img{
+    max-width: 30rem;
+}
+
+
+}
+
+@media(max-width: 450px){
+    .our-solution-header-wrapper{
+        flex-direction: column;
+    }
+    .our-solution-header-wrapper > h2{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 380px){
+    .solution-number{
+        font-size: 3rem;
+    }
+    .solution-step-title{
+        font-size: 2.5rem;
+    }
+}
