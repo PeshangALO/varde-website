@@ -324,13 +324,12 @@
 
 }
 
-@media(max-width: 400px){
+@media(max-width: 420px){
 
     #the-problem-section > h2{
         font-size: 3rem;
     }
 
-    
     #the-problem-section > h6{
         font-size: 2rem;
     }
