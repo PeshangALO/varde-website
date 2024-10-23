@@ -13,8 +13,6 @@
     --kant-pro: "Kantumruy Pro", serif;
 }
 
-
-
 #about-hero-section{
     background: linear-gradient(to top, rgba(51, 40, 94, 1), rgba(69, 49, 148, 1));
     height: 1000px;
@@ -23,6 +21,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    z-index: -1;
 }
 
 #about-title-wrapper{
@@ -56,6 +55,7 @@
     overflow-x: hidden;
     right: -10rem;
     max-width: 55rem;
+    z-index: 1;
 }
 
 
@@ -168,7 +168,24 @@
     max-width: 20rem;
     }
 }
-@media(max-width: 340px){
+
+
+
+@media(max-width: 350px){
+    #about-title-wrapper{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #about-title-wrapper > img{
+        max-width: 17rem;
+    }
+
+    #about-title-wrapper > h1{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
     #about-hero-section{
         height: 60vh;
     }
@@ -237,6 +254,8 @@
     font-family: var(--kant-pro);
     font-weight: 300;
     font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -267,12 +286,13 @@
 
 .solution-divider{
     background: rgba(53, 39, 97, 1);
-    background-image: url("./section-dividers/light-blue-divider.svg");
-    height:220px;
-
 }
 
 @media(max-width: 767px){
+    .solution-divider{
+        width: 50rem;
+    }
+
     .final-statement-wrapper{
         text-align: center;
     }
@@ -328,8 +348,19 @@
     }
 
     #all-symptoms{
-        row-gap: 4rem;
-        column-gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .symptom-wrapper{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .left-column{
+        flex-direction: row-reverse;
     }
 
     .final-statement-wrapper{
@@ -348,6 +379,7 @@
     background: linear-gradient(to bottom, rgba(59, 89, 194, 1), rgba(78, 117, 255, 1));
     padding-bottom: 10rem;
     position: relative;
+    z-index: -1;
 }
 
 .our-solution-header-wrapper{
@@ -378,11 +410,10 @@
 .solution-wrapper{
     display: flex;
     justify-content: flex-start;
-    gap: 3rem;
+    gap: 2rem;
 }
 .solution-wrapper > img{
     max-width: 95rem;
-
 }
 
 .solution-title-container{
@@ -393,6 +424,8 @@
 .solution-text-wrapper{
     color:white;
     max-width: 50rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .place-text-midd{
@@ -437,7 +470,40 @@
 }
 
 
-@media(max-width: 767px){
+@media(max-width: 1300px){
+    #bottom-logo{
+        opacity: 0.5;
+    }
+}
+
+
+@media(max-width: 1250px){
+    .solution-number{
+        font-size: 7rem;
+    }
+    .solution-step-title{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .solution-wrapper{
+        gap: 1rem;
+    }
+    
+    .solution-wrapper > img {
+        max-width: 20rem;
+        z-index: 2;
+    }
+
+}
+
+@media(max-width: 840px){
+
+    .our-solution-header-wrapper{
+        padding-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+
 
     .solution-title-container{
         justify-content: flex-start;
@@ -446,8 +512,6 @@
     
     .solution-wrapper{
         gap: 0;
-        margin-left: 1rem;
-        margin-right: 2rem;
     }
 
     .solution-number{
@@ -459,18 +523,68 @@
         margin-bottom: 0.5rem;
     }
 
-    .solution-wrapper > img{
-        max-width: 20rem;
-    }
-
     #bottom-logo{
         bottom: -15rem;
     }
 
 }
 
-@media(max-width: 1300px){
-    #bottom-logo{
-        opacity: 0.5;
+@media(max-width: 680px){
+/*     .solution-text-wrapper{
+        margin: 0;
+    } */
+
+.our-solution-header-wrapper > h2{
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.solution-step-title{
+    margin-bottom: 0.2rem;
+}
+
+#the-solutions-container{
+    gap: 5rem;
+}
+
+.solution-wrapper{
+    flex-direction: column;
+    align-items: center;
+}
+
+.reversed-solution{
+    flex-direction: column-reverse;
+}
+.reversed-solution > img {
+    max-width: 17rem;
+}
+
+#bottom-logo{
+    right: -5rem;
+}
+
+#bottom-logo > img{
+    max-width: 30rem;
+}
+
+
+}
+
+@media(max-width: 450px){
+    .our-solution-header-wrapper{
+        flex-direction: column;
+    }
+    .our-solution-header-wrapper > h2{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 380px){
+    .solution-number{
+        font-size: 3rem;
+    }
+    .solution-step-title{
+        font-size: 2.5rem;
     }
 }
