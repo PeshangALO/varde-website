@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-fetch(`./json/aboutus.json`)
+fetch(`./json/employees.json`)
     .then(response => response.json())
     .then(data => {
     const employeeContainer = document.getElementById("team-members");
@@ -10,10 +10,10 @@ fetch(`./json/aboutus.json`)
             const imgWrapper = document.createElement("div");
             imgWrapper.classList.add("employee-image-wrapper");
 
-
             const employeeImg = document.createElement("img");
             employeeImg.src = employeeInfo.image;
             employeeImg.alt = employeeInfo.title;
+            employeeImg.loading = "lazy";
             employeeImg.classList.add("employee-img");
 
             const employeeDescription = document.createElement("div");
@@ -40,11 +40,9 @@ fetch(`./json/aboutus.json`)
             employeeWrapper.appendChild(employeeDescription);
         
             employeeContainer.appendChild(employeeWrapper);
-
         });
     }).catch(error => console.log("Error fetching employee data: ", error))
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -77,16 +75,13 @@ document.addEventListener("DOMContentLoaded", function(){
                 blogDescription.textContent = firstBlogItem.description;
                 blogDescription.classList.add('latest-blog-description');
 
-
-
                 const blogDate = document.createElement('h6');
                 blogDate.textContent = new Date(firstBlogItem.date).toLocaleDateString(
                     'en-US', {
                         year: "numeric", month: "long", day:"numeric"
                     });
                     blogDate.classList.add('latest-blog-date');
-                
-                    
+                                  
                     blogText.appendChild(blogTitle);
                     blogText.appendChild(blogDescription);
                     blogText.appendChild(blogDate);

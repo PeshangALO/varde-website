@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Varde</title>
-    <link rel="stylesheet" href="styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
-    <link rel="stylesheet" href="about-varde.css">
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
+    <link rel="stylesheet" href="./styles/about-varde.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">  <!-- Increment if style is updated to forc hard refreach -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,8 @@
 <body>
     <header class="header-color">
         <nav id="nav-container"></nav>
-
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+        
+        <nav id="hamburger-menu"></nav>
     </header>
   
 <main>
@@ -27,7 +24,7 @@
     <h1 id="title-start">
         What is
     </h1>
-<img src="./images/varde-logo-only-text.png">
+<img src="./images/varde-logo-only-text.png" alt="Varde">
     <h1 id="title-end">
        about? 
     </h1>
@@ -89,6 +86,7 @@
 </section>
 
 <div class="solution-divider section-divider">
+    <img src="./section-dividers/light-blue-divider.svg">
 </div>
 
 <section id="our-solution">
@@ -108,23 +106,21 @@
                     <h4 class="solution-step-title">Scan</h4>
                 </div>    
                 <div class="solution-description-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q
-                    uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                    <p>Simply snap a photo of your meal, and our algorithm calculates 
+                        the carbohydrate content while factoring in other key variables like portion size and food type.</p>
                 </div>
             </div>   
     </div>
 
-    <div class="solution-wrapper">
+    <div class="solution-wrapper reversed-solution">
             <div class="solution-text-wrapper place-text-midd">
                 <div class="solution-title-container">
                     <h4 class="solution-number">2.</h4>
                     <h4 class="solution-step-title">Predict</h4>
                 </div>    
                 <div class="solution-description-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q
-                    uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                    <p>Using this data, our AI model analyzes your glucose trends and predicts your levels up to 4 hours into the future,
+                         based on recent activity, insulin use, meal intake, and other key factors.</p>
                 </div>
             </div>   
             <img src="./images/predict-picture.png">
@@ -138,9 +134,7 @@
                     <h4 class="solution-step-title">Recommend</h4>
                 </div>    
                 <div class="solution-description-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q
-                    uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                    <p>Our AI then provides personalized insulin dosage recommendations tailored to your predicted glucose levels and individual needs.</p>
                 </div>
             </div>   
     </div>
@@ -154,6 +148,20 @@
     <img src="./images/transparent-logo-purple.png">
 </div>
 </section>
+
+<section id="partners" class="partners">
+    <div class="partners-container">
+        <a href="https://www.innovasjonnorge.no" target="_blank">
+            <img src="images/IN_Logo_Eng.png" alt="Partner 1 Logo" class="partner-logo">
+        </a>
+        <a href="https://www.innoventussor.no" target="_blank">
+            <img src="images/L-Innoventus_sor_CMYK.png" alt="Partner 2 Logo" class="partner-logo">
+        </a>
+        <a href="https://uia.no" target="_blank">
+            <img src="images/logoUiA.png" alt="Partner 3 Logo" class="partner-logo">
+        </a>
+    </div>
+</section> 
 
 <section id="contact">
     <div class="contact-container">
@@ -180,7 +188,7 @@
     </div>
     <p id="copyright"></p>
 </footer>
-
-    <script src="./scripts/script.js"></script>
+<script src="./scripts/script.js" defer></script>
+<script src="./scripts/hamburgerMenu.js" defer></script>
 </body>
 </html>

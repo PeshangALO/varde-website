@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Varde</title>
-    <link rel="stylesheet" href="styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">  <!-- Increment if style is updated to forc hard refreach -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +13,16 @@
 </head>
 <body>
     <header class="header-color">
-        <nav id="nav-container">
-        </nav>
+            <nav id="nav-container"></nav>
+            <nav id="hamburger-menu"></nav>
     </header>
+
     <main>
         <section id="home" class="hero">
             <div class="hero-content-wrapper">
                 <div class="hero-container">
                         <div class="logo-wrapper">
-                            <img src="images/varde-logo.png" alt="Varde Logo" class="logo">
+                            <img src="images/varde-logo.png" alt="Varde Logo" class="logo" loading="lazy">
                         </div>
                     <div class="hero-text-container">
                         <h1 class="title title-text">Next-gen Diabetes Wellness</h1>
@@ -30,18 +32,18 @@
                     <div class="button-container">
                         <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button">Become a beta user</a>
                     </div>
-                    <img class="app-demo-pic" src="images/hero-iphone.png" alt="Varde app on iPhone"/>
+                    <img class="app-demo-pic" src="images/hero-iphone.png" alt="Varde app on iPhone" loading="lazy"/>
                 </div>
             </section>
             <div class="section-divider">
-                <img src="section-dividers/about-us-top-divider.svg"/>
+                <img src="section-dividers/about-us-top-divider.svg" loading="lazy"/>
             </div>    
 
             <section id="about-us" class="about">
                 <div class="about-us-header-wrapper">
                     <h2 class="section-title">About us</h2>
-                    <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p class="section-description">Varde AS is an innovative tech company specializing in developing explainable AI solutions to empower people with diabetes. 
+                        Our team combines deep expertise in AI and personal experience with diabetes to create cutting-edge technology. </p>
                 </div>
             
                 <div class="about-content-container">
@@ -49,8 +51,8 @@
                         <p class="about-us-number">1</p>
                             <div class="about-text-container">
                         <h3>Our Goal</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <p>We aim to reduce illness and improve the quality of life for all people with diabetes by providing intelligent, 
+                            user-friendly tools that enable better control and management of their condition.</p>
                             </div>
                     </div>
             
@@ -58,31 +60,37 @@
                         <p class="about-us-number">2</p>
                             <div class="about-text-container">
                         <h3>What is Varde?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <p>We've developed an AI algorithm that predicts glucose levels and explains its insulin adjustment recommendations. By integrating 42 factors, our solution provides personalized insights,
+                             empowering users to manage diabetes more confidently through an intuitive app.</p>
                             </div>
                     </div>
                 </div>
+                <div>
+
+                    <div class="learn-more-button">
+                        <a href="./about-varde.html" class="beta-button">Learn more about us</a>
+                    </div>
+
             </section>
 
             <div class="section-divider">
-                <img src="section-dividers/about-us-bottom-divider.svg">
+                <img src="section-dividers/about-us-bottom-divider.svg" loading="lazy">
             </div>
         
         <section id="the-team" class="team">
                 <div class="the-team-header-wrapper">
                     <h2 class="section-title">The Team</h2>
                     <p class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Varde Tech AS combines a multidisciplinary 
+                        team to realize its vision of improving diabetes management through innovative AI solutions.
                     </p>
                 </div>
         
                 <div id="team-members">
                 </div>
         </section>
-        <div class="section-divider">
-            <img src="section-dividers/the-team-bottom-divider.svg">
+        <div class="section-divider latest-blog-divider">
+            <img src="section-dividers/the-team-bottom-divider.svg" loading="lazy">
         </div>
     
         <section id="latest-blog">
@@ -111,7 +119,6 @@
             <a href="https://uia.no" target="_blank">
                 <img src="images/logoUiA.png" alt="Partner 3 Logo" class="partner-logo">
             </a>
-            <!-- Add more partner logos as needed -->
         </div>
     </section> 
     <section id="contact">
@@ -142,5 +149,8 @@
 
     <script src="./scripts/indexScripts.js"></script>
     <script src="./scripts/script.js"></script>
+
+    <script src="./scripts/hamburgerMenu.js"></script>
+
 </body>
 </html>
