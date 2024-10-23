@@ -1,6 +1,6 @@
 [
     {
-        "image": "images/sondre_black-and-white.png",
+        "image": "images/alex_black-and-white.png",
         "teamMember": "Rune Alexander Laursen",
         "position": "CEO",
         "description": "Alex, the originator of Varde Tech AS, has type 1 diabetes and holds a master's degree in artificial intelligence. His unique background equips him to lead Varde's mission of empowering people with diabetes through innovative AI solutions."
@@ -18,9 +18,9 @@
         "description": "Rasmus Nicolay Pripp, CFO of Varde Tech AS, holds a master's degree in entrepreneurship and finance. His expertise in financial strategy, risk management, and business development ensures the company's sustainable growth and long-term success." 
     },
     {
-        "image": "images/alex_black-and-white.png",
+        "image": "images/sondre_black-and-white.png",
         "teamMember": "Sondre Simensen Bergane",
-        "position": "Founder",
+        "position": "CMO",
         "description": "Sondre Simensen Bergane, CMO of Varde Tech AS, holds a master's degree in entrepreneurship and innovation. With his background in business development and marketing, he leads Varde’s strategy for market penetration and brand growth, ensuring the company reaches and connects with its target audience effectively." 
     }
 ]
