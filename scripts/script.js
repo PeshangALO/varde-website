@@ -61,42 +61,20 @@ const hamburgerNav = `
 });
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    const navButtons = document.querySelectorAll(".nav-button");
-    let activeButton = null;
-
-    const currentPage = window.location.pathname.split("/").pop();
-
-    const savedIndex = localStorage.getItem("activeButtonIndex");
-
-    function setActiveButton(button, index) {
-        if (activeButton) {
-            activeButton.classList.remove("active-button");
+    const buttons = document.querySelectorAll(".nav-button");
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    buttons.forEach(button => {
+        if (button.closest("a").getAttribute("href").includes(currentPage)) {
+            button.classList.add("active-button");
         }
-        button.classList.add("active-button");
-        activeButton = button;
-        localStorage.setItem("activeButtonIndex", index);
-    }
-
-    // Loop through each nav button and determine which should be active
-    navButtons.forEach((button, index) => {
-        const link = button.closest("a").getAttribute("href").split("/").pop();
-
-        // If the current page matches the link, set as active
-        if (currentPage === link || (currentPage === "" && link === "index.html")) {
-            setActiveButton(button, index);
-        }
-
+        
         button.addEventListener("click", () => {
-            setActiveButton(button, index);
+            buttons.forEach(b => b.classList.remove("active-button"));
+            button.classList.add("active-button");
         });
     });
-
-    // If no button was set as active, try to restore from localStorage
-    if (!activeButton && savedIndex !== null && navButtons[savedIndex]) {
-        setActiveButton(navButtons[savedIndex], savedIndex);
-    }
 });
 
 

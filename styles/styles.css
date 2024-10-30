@@ -416,7 +416,7 @@ li{
 /*------------------------------------*/
 /*----------ABOUT SECTION-------------*/
 /*------------------------------------*/
-.section-divider img {
+.section-divider{
     display: block; /* Ensures no extra space below the image */
     line-height: 0; 
     width: 100%;
@@ -632,6 +632,10 @@ li{
 }
 
 @media(max-width: 550px){
+    .the-team-header-wrapper{
+        margin-left: 1rem;
+    }
+
     .section-title {
         font-size: 3.5rem;
     }
@@ -651,6 +655,11 @@ li{
     .employee-text > p {
         text-align: left;
     }
+
+    #the-team{
+        padding-top: 2rem;
+    }
+
 }
 
 /*------------------------------------*/
@@ -767,9 +776,18 @@ li{
 
 }
 
+@media(max-width: 530px){
+    #latest-blog{
+        padding: 0;
+    }
+}
+
 @media(max-width: 375px){
     .latest-blog-description > h2{
         font-size: 1.2rem;
+    }
+    .latest-blog-container > h4 {
+        align-self: center;
     }
 }
 
@@ -826,6 +844,13 @@ li{
     font-family: var(--kant-pro);
     font-weight: 500;
     margin: 0;
+}
+
+.blog-description p a {
+    display: inline;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
 }
 
 .blog-date {
