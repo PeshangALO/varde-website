@@ -846,12 +846,6 @@ li{
     margin: 0;
 }
 
-.blog-description p a {
-    display: inline;
-    font-weight: 800;
-    margin: 0;
-    padding: 0;
-}
 
 .blog-date {
     display: flex;
@@ -869,6 +863,13 @@ li{
     line-height: 1.5;
     font-family: var(--karma);
     font-weight: 700;
+}
+
+.blog-description p a {
+    display: inline;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
 }
 
 .blog-description > p > a {
