@@ -402,7 +402,7 @@ li{
 @media(max-width: 480px){
     .hero {
         padding: 30px 10px;
-        margin: 5rem 0 3rem 0;
+        margin: 5rem 0 0 0;
     }
 }
 
