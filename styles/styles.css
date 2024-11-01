@@ -415,7 +415,7 @@ li{
 /*------------------------------------*/
 /*----------ABOUT SECTION-------------*/
 /*------------------------------------*/
-.section-divider{
+.section-divider img{
     display: block; /* Ensures no extra space below the image */
     line-height: 0; 
     width: 100%;
@@ -658,7 +658,6 @@ li{
     .employee-text {
         margin-left: 0; 
         align-items: center;
-        gap: 0rem;
     }
 
     .employee-text > p {
@@ -668,6 +667,10 @@ li{
     #the-team{
         padding-top: 2rem;
     }
+    .the-team-header-wrapper > p{
+        font-size: 1.3rem;
+    }
+
 
 }
 
