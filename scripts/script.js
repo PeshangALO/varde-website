@@ -8,20 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
     //Navigation bar script. 
     const navLogo = `images/varde-logo-white.png`;
     
-    const currentPath = window.location.pathname; 
-
     const navHTML = `
         <div>
             <a href="./index.html">
-                <img src=${navLogo} class="header-logo" />
+                <img src=${navLogo} class="header-logo"/>
             </a>
         </div>
-        <ul>
-            <li><a class="nav-button" href="./index.html#home">Home</a></li>
-            <li><a class="nav-button" href="./about-varde.html">About</a></li>
-            <li><a class="nav-button" href="./index.html#the-team" id="team-link">The Team</a></li>
-            <li><a class="nav-button" href="./blog.html">Blog</a></li>
-            <li><a class="nav-button" href="#contact">Contact</a></li>
+        <ul role="menubar">
+            <li><a class="nav-button" role="menuitem" href="./index.html#home">Home</a></li>
+            <li><a class="nav-button" role="menuitem" href="./about-varde.html">About</a></li>
+            <li><a class="nav-button" role="menuitem" href="./index.html#the-team" id="team-link">The Team</a></li>
+            <li><a class="nav-button" role="menuitem" href="./blog.html">Blog</a></li>
+            <li><a class="nav-button" role="menuitem" href="#contact">Contact</a></li>
         </ul>
     `;
     
@@ -35,15 +33,17 @@ const hamburgerNav = `
                 </button>
               </nav>
               <div id="mobile-menu" class="off-screen-menu" hidden>
-                <ul>
-                  <li><a class="nav-links" href="./index.html">Home</a></li>
-                  <li><a class="nav-links" href="./about-varde.html">About</a></li>
-                  <li><a class="nav-links" href="./index.html#the-team" id="team-link">The Team</a></li>
-                  <li><a class="nav-links" href="blog.html">Blog</a></li>
-                  <li><a class="nav-links" href="#contact">Contact</a></li>
+                <ul role="menubar">
+                  <li><a class="nav-links" role="menuitem" href="./index.html">Home</a></li>
+                  <li><a class="nav-links" role="menuitem" href="./about-varde.html">About</a></li>
+                  <li><a class="nav-links" role="menuitem" href="./index.html#the-team" id="team-link">The Team</a></li>
+                  <li><a class="nav-links" role="menuitem" href="blog.html">Blog</a></li>
+                  <li><a class="nav-links" role="menuitem" href="#contact">Contact</a></li>
                 </ul>
               </div>
 `;
+
+    const currentPath = window.location.pathname; 
 
     const hamburgerMenu = document.getElementById("hamburger-menu");
     hamburgerMenu.innerHTML = hamburgerNav;
@@ -62,22 +62,46 @@ const hamburgerNav = `
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".nav-button");
+    const navButtons = document.querySelectorAll(".nav-button");
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     
-    buttons.forEach(button => {
+    navButtons.forEach(button => {
         if (button.closest("a").getAttribute("href").includes(currentPage)) {
             button.classList.add("active-button");
         }
         
         button.addEventListener("click", () => {
-            buttons.forEach(b => b.classList.remove("active-button"));
+            navButtons.forEach(b => b.classList.remove("active-button"));
             button.classList.add("active-button");
         });
     });
+
+    navButtons.forEach((item, index) => {
+        item.addEventListener("keydown", (e) => {
+
+            switch(e.key){
+                case 'ArrowRight':
+                    e.preventDefault();
+                        const nextItem = navButtons[(index + 1) % navButtons.length];
+                    nextItem.focus();
+                break;
+            
+                case 'ArrowLeft':
+                    e.preventDefault();
+                        const prevItem = navButtons[(index - 1 + navButtons.length) % navButtons.length];
+                    prevItem.focus();
+                break;
+                
+                case 'Home':
+                    e.preventDefault();
+                    navButtons[0].focus();
+                break;
+
+                case 'End':
+                    e.preventDefault();
+                    navButtons[navButtons.length - 1].focus();
+                break;
+            }
+        });
+    });
 });
-
-
-
-
-
