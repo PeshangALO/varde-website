@@ -15,20 +15,19 @@
 
 #about-hero-section{
     background: linear-gradient(to top, rgba(51, 40, 94, 1), rgba(69, 49, 148, 1));
-    height: 1000px;
     color: white;
-    height: 70vh;
+    padding: 12rem 0 12rem 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    z-index: -1;
 }
 
 #about-title-wrapper{
+    margin-right: 45rem;
     display: grid;
     grid-template-columns: 40rem;
     grid-template-rows: 3rem 10rem 3rem;
-    margin:0 0 0 20rem;
     z-index: 2;
 }
 
@@ -61,27 +60,20 @@
 
 @media(max-width: 1500px){
     #about-title-wrapper{
-        margin-left: 8rem;
+        margin-right: 10rem;
     }
-}
-
-@media(max-width: 1300px){
-    .varde-transparent-logo{
-        opacity: 0.5;
-    }
-}
-
-@media(max-width: 767px){
-    #about-title-wrapper{
-        margin-left: 2rem;
-    }
-
     .varde-transparent-logo{
         opacity: 0.2;
-        right: 0;
     }
-
 }
+
+@media(max-width: 900px){
+    #about-title-wrapper{
+        margin-right: 0;
+    }
+}
+
+
 
 /*------------------------------------------------*/
 /*------------------INFORMATION-------------------*/

@@ -2,10 +2,14 @@ document.addEventListener("DOMContentLoaded", function(){
 fetch(`./json/employees.json`)
     .then(response => response.json())
     .then(data => {
+
+        let employeeNumber = 1;
+
     const employeeContainer = document.getElementById("team-members");
         data.forEach(employeeInfo => {
             const employeeWrapper = document.createElement("div");
-            employeeWrapper.classList.add("employee-wrapper")
+            employeeWrapper.classList.add("employee-wrapper");
+            employeeWrapper.classList.add(`employee${employeeNumber}`);
 
             const imgWrapper = document.createElement("div");
             imgWrapper.classList.add("employee-image-wrapper");
@@ -40,7 +44,9 @@ fetch(`./json/employees.json`)
             employeeWrapper.appendChild(employeeDescription);
         
             employeeContainer.appendChild(employeeWrapper);
+            employeeNumber++;
         });
+       
     }).catch(error => console.log("Error fetching employee data: ", error))
 });
 
