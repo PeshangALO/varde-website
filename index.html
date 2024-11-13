@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> -->
-    <title>Varde</title>
+    <meta name="description" content="Varde AS develops explainable AI solutions for diabetes management. Our innovative app predicts glucose levels and provides personalized insulin recommendations to improve quality of life for people with diabetes.">
+    <meta name="keywords" content="diabetes management, AI healthcare, glucose prediction, diabetes wellness, insulin management, healthcare technology, diabetes app">
+    <meta name="author" content="Varde AS">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Varde - Next-gen Diabetes Wellness">
+    <meta property="og:description" content="Next-gen Diabetes Wellness powered by AI.">
+    <meta property="og:image" content="https://varde.ai/images/varde-logo.png">
+    <meta property="og:url" content="https://varde.ai/">
+    <meta property="og:type" content="website">
+
+    <title>Varde - Next-gen Diabetes Wellness</title>
+    <link rel="canonical" href="https://varde.ai/">
     <link rel="icon" type="image/x-icon" href="./images/varde-favicon.png">
     <link rel="stylesheet" href="./styles/styles.css?v=1.0.1"> <!-- Increment if style is updated to forc hard refreach -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">  <!-- Increment if style is updated to forc hard refreach -->
@@ -13,34 +24,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header-color">
-            <nav id="nav-container"></nav>
-            <nav id="hamburger-menu"></nav>
+    <header class="header-color" role="banner">
+            <nav id="nav-container" aria-label="Main Navigation"></nav>
+            <nav id="hamburger-menu" aria-label="Mobile Navigation"></nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
+    <main role="main">
+        <section id="home" class="hero" aria-labelledby="hero-title" tabindex="0">
             <div class="hero-content-wrapper">
                 <div class="hero-container">
                         <div class="logo-wrapper">
-                            <img src="images/varde-logo.png" alt="Varde Logo" class="logo" loading="lazy">
+                            <img src="images/varde-logo.png" alt="Varde - Next-gen Diabetes Wellness" class="logo" loading="lazy">
                         </div>
-                    <div class="hero-text-container">
+                    <div class="hero-text-container" tabindex="-1">
                         <h1 class="title title-text">Next-gen Diabetes Wellness</h1>
-                        <p class="coming-soon title-text">Coming soon ...</p>
+                        <p class="coming-soon title-text">Coming soon...</p>
                     </div>
                 </div>
                     <div class="button-container">
-                        <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button">Become a beta user</a>
+                        <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Sign up for beta access.">Become a beta user</a>
                     </div>
-                    <img class="app-demo-pic" src="images/Varde-iPhone-Demo.png" alt="Varde app on iPhone" loading="lazy"/>
+                    <img class="app-demo-pic" src="images/Varde-iPhone-Demo.png" alt="Varde app on iPhone" alt="Varde app interface on iPhone" loading="lazy"/>
                 </div>
             </section>
             <div class="section-divider">
                 <img src="section-dividers/about-us-top-divider.svg" loading="lazy"/>
             </div>    
 
-            <section id="about-us" class="about">
+            <section id="about-us" class="about" tabindex="0">
                 <div class="about-us-header-wrapper">
                     <h2 class="section-title">About us</h2>
                     <p class="section-description">Varde AS is an innovative tech company specializing in developing explainable AI solutions to empower people with diabetes. 
@@ -66,10 +77,10 @@
                             </div>
                     </div>
                 </div>
-                <div>
+                
 
                     <div class="learn-more-button">
-                        <a href="./about-varde.html" class="beta-button">Learn more about us</a>
+                        <a href="./about-varde.html" class="beta-button" aria-label="Click to learn more about Varde." alt="Learn more about Varde.">Learn more about us</a>
                     </div>
 
             </section>
@@ -78,7 +89,7 @@
                 <img src="section-dividers/about-us-bottom-divider.svg" loading="lazy">
             </div>
         
-        <section id="the-team" class="team">
+        <section id="the-team" class="team" tabindex="0" alt="The different team-members at Varde.">
                 <div class="the-team-header-wrapper">
                     <h2 class="section-title">The Team</h2>
                     <p class="section-description">
@@ -90,26 +101,27 @@
                 <div id="team-members">
                 </div>
         </section>
+
         <div class="section-divider latest-blog-divider">
             <img src="section-dividers/the-team-bottom-divider.svg" loading="lazy">
         </div>
     
-        <section id="latest-blog">
+        <section id="latest-blog" tabindex="0">
             <div class="blog-header-wrapper">
                 <h2 class="section-title">Blog</h2>
                 <p class="section-description">Read our blog-snippets for info about recent activities, progress and successes!
                 </p>
             </div>
         
-        <div class="latest-blog-container">
+        <div class="latest-blog-container" aria-label="Click for more blog-posts.">
             <h4>Latest update</h4>
             <div id="latest-blog-wrapper"></div>
         </div>
         
-        <a href="blog.html"id="read-blog-button">Read more</a> 
+        <a href="blog.html" id="read-blog-button" aria-label="Access more blogposts.">Read more</a> 
         </section>
        
-    <section id="partners" class="partners">
+    <section id="partners" class="partners" aria-label="Links to Varde collaborators website">
         <div class="partners-container">
             <a href="https://www.innovasjonnorge.no" target="_blank">
                 <img src="images/IN_Logo_Eng.png" alt="Partner 1 Logo" class="partner-logo">
@@ -122,7 +134,7 @@
             </a>
         </div>
     </section> 
-    <section id="contact">
+    <section id="contact" alt="Contact information for contacting Varde.">
         <div class="contact-container">
             <div class="contact-info">
                 <h1>Contact us</h1>
@@ -134,14 +146,14 @@
                 </div>
             </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.401076394078!2d7.986608642502217!3d58.14671079463462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463803b6a74d5b77%3A0xf68764043242d98!2sParal%20Dynamics!5e0!3m2!1sen!2sno!4v1685201234567!5m2!1sen!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.401076394078!2d7.986608642502217!3d58.14671079463462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463803b6a74d5b77%3A0xf68764043242d98!2sParal%20Dynamics!5e0!3m2!1sen!2sno!4v1685201234567!5m2!1sen!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" tabindex="-1"></iframe>
             </div>
         </div>
     </section>  
     </main>
     <footer>
         <div class="social-media">
-            <a href="https://www.linkedin.com/company/varde" target="_blank" class="social-link">
+            <a href="https://www.linkedin.com/company/varde" target="_blank" class="social-link" aria-label="Visit Varde on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
