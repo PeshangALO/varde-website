@@ -65,6 +65,14 @@ a{
     transform: translateY(-0.3rem);
 }
 
+
+.nav-button:focus{
+    transition: 0.2s;
+    border: 1px solid white;
+    box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(222, 246, 246, 1);
+    transform: translateY(-0.3rem);
+}
+
 .active-button{
     border: 1px solid white;
     transform: translateY(-0.3rem);
