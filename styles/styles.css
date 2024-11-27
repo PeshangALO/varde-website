@@ -457,6 +457,10 @@ li{
     max-width: 35rem
 }
 
+.info-detail-content-wrapper{
+    max-width: 20rem;
+}
+
 .about-us-number{
     font-size: 10rem;
     font-family: var(--montes);
@@ -491,13 +495,27 @@ li{
 
 @media(max-width: 780px){
 
+    .info-detail-content-wrapper{
+        max-width: 40rem;
+    }
+
+
     #about-us{
         padding: 3rem 0 3rem 0;
     }
 
-    .about-us-text-wrapper{
-        display: grid;
-        grid-template-columns: 5rem 1fr;
+    #our-goal::before{
+        content:"1. ";
+        font-family: var(--montes);
+    }
+
+    #what-is-varde::before{
+        content: "2. ";
+        font-family: var(--montes);
+    }
+
+    .about-us-number{
+        display: none;
     }
 
     .about-content-container{
@@ -511,15 +529,10 @@ li{
         margin: 0;
     }
 
-    .about-text-container h3{
+    .about-text-container > h3{
         margin-top: 1rem;
         font-size: 2rem;
     }
-
-    .about-us-number{
-        font-size: 8rem;
-    }
-
 }
 
 @media(max-width:474px){
@@ -543,8 +556,9 @@ li{
 
 
 .the-team-header-wrapper{
-    place-self: center;
-    text-align: center;
+    margin-left: 10rem;
+    place-self: start;
+    text-align: start;
 }
 
 .the-team-header-wrapper > p{
@@ -642,8 +656,8 @@ li{
 
 
 @media(max-width: 1100px){
-    .the-team-header-wrapper > p{
-        margin-left: 0;
+    .the-team-header-wrapper{
+        margin-left: 5rem;
     }
 
     #team-members{
@@ -651,6 +665,13 @@ li{
         flex-direction: column;
         margin-top: 2rem;
     }
+}
+
+@media(max-width: 950px){
+    .the-team-header-wrapper{
+        margin-left: 2rem;
+    }
+
 }
 
 
@@ -681,6 +702,9 @@ li{
         font-size: 1.3rem;
     }
 
+    .the-team-header-wrapper{
+        margin-left: 0rem;
+    }
 
 }
 
