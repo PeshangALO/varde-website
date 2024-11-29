@@ -21,20 +21,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 const blogTitle = document.createElement('h2');
                 blogTitle.textContent = blog.title;
 
+                    const pictureCred = document.createElement('h6');
+                    pictureCred.textContent = blog.photoCreds;
+                    pictureCred.classList.add('blog-info');
+                    blogDescription.appendChild(pictureCred);
+        
+                const blogInfo = document.createElement("div");
+                blogInfo.classList.add("blog-info-container");
 
                 const blogDate = document.createElement('h6');
-                blogDate.classList.add('blog-date');
+                blogDate.classList.add('blog-info');
                 blogDate.textContent = new Date(blog.date).toLocaleDateString('en-US', {
                     year: 'numeric', month: 'long', day: 'numeric'
         
                 });
+
+                blogInfo.appendChild(pictureCred);
+                blogInfo.append(blogDate);
 
                 const blogText = document.createElement('p');
                 blogText.innerHTML = blog.description;
 
                 blogDescription.appendChild(blogTitle);
                 blogDescription.appendChild(blogText);
-                blogDescription.appendChild(blogDate);
+                blogDescription.appendChild(blogInfo);
 
                 blogItem.appendChild(blogImage);
                 blogItem.appendChild(blogDescription);
