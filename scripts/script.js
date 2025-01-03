@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
         </div>
         <ul role="menubar">
-            <li><a class="nav-button" role="menuitem" href="./index.html#home">Home</a></li>
-            <li><a class="nav-button" role="menuitem" href="./about-varde.html">About</a></li>
-            <li><a class="nav-button" role="menuitem" href="./index.html#the-team" id="team-link">The Team</a></li>
-            <li><a class="nav-button" role="menuitem" href="./blog.html">Blog</a></li>
-            <li><a class="nav-button" role="menuitem" href="#contact">Contact</a></li>
+            <li><a class="nav-button" role="menuitem" href="./index.html#home">Hjem</a></li>
+            <li><a class="nav-button" role="menuitem" href="./about-varde.html">Om Oss</a></li>
+            <li><a class="nav-button" role="menuitem" href="./index.html#the-team" id="team-link">Teamet</a></li>
+            <li><a class="nav-button" role="menuitem" href="./blog.html">Blogg</a></li>
+            <li><a class="nav-button" role="menuitem" href="#contact">Kontakt</a></li>
         </ul>
     `;
     
@@ -34,11 +34,11 @@ const hamburgerNav = `
               </nav>
               <div id="mobile-menu" class="off-screen-menu" hidden>
                 <ul role="menubar">
-                  <li><a class="nav-links" role="menuitem" href="./index.html">Home</a></li>
-                  <li><a class="nav-links" role="menuitem" href="./about-varde.html">About</a></li>
-                  <li><a class="nav-links" role="menuitem" href="./index.html#the-team" id="team-link">The Team</a></li>
-                  <li><a class="nav-links" role="menuitem" href="blog.html">Blog</a></li>
-                  <li><a class="nav-links" role="menuitem" href="#contact">Contact</a></li>
+                  <li><a class="nav-links" role="menuitem" href="./index.html">Hjem</a></li>
+                  <li><a class="nav-links" role="menuitem" href="./about-varde.html">Om Oss</a></li>
+                  <li><a class="nav-links" role="menuitem" href="./index.html#the-team" id="team-link">Teamet</a></li>
+                  <li><a class="nav-links" role="menuitem" href="blog.html">Blogg</a></li>
+                  <li><a class="nav-links" role="menuitem" href="#contact">Kontakt</a></li>
                 </ul>
               </div>
 `;

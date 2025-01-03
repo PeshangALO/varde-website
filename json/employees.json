@@ -3,18 +3,18 @@
         "image": "images/alex_black-and-white.png",
         "teamMember": "Rune Alexander Laursen",
         "position": "CEO",
-        "description": "Grunnleggeren av Varde Tech AS, lever med type 1 diabetes og har en mastergrad i IKT med spesialisering innen kunstig intelligens. Hans unike bakgrunn gir ham det som trengs for å lede teamet og Vardes misjon om å gi mennesker med diabetes en enklere hverdag ved bruk av den innovative KI-løsningen Varde."
+        "description": "Med type 1 diabets, dataingeniør innen softwareutvikling og en IKT mastergrad spesialisert på kunstig intelligens, leder han selskapet med en unik kombinasjon av erfaring, innsikt og teknisk kompetanse."
     },
     {
         "image": "images/peshang_black-and-white.png",
         "teamMember": "Peshang Alo",
         "position": "CTO",
-        "description": "Medgründer som har en mastergrad i kunstig intelligens, erfaring or spiss kompetanse innen programvareutvikling. Hans ekspertise driver den tekniske utviklingen av Vardes KI-løsning, og sikrer nøyaktighet og pålitelighet i håndteringen av data i algoritmen."
+        "description": "Med sin bakgrunn som dataingeniør innen softwareutvikling, toppet med en mastergrad i IKT spesialisert på kunstig intelligens, leder han den tekniske utviklingen av Varde og produktets kontinuerlige innovasjon."
     },
     {
         "image": "images/rasmus_black-and-white.png",
         "teamMember": "Rasmus Nicolay Pripp",
         "position": "CFO",
-        "description": "Har en mastergrad i entreprenørskap og finans. Hans ekspertise innen finansstrategi, risikostyring og forretningsutvikling sikrer selskapets bærekraftige vekst og langsiktige suksess."
+        "description": "Med en mastergrad i entreprenørskap og finans bringer Rasmus en skarp strategisk tilnærming til selskapets vekst. Han er drivkraften i å sikre kritisk finansiering og utvikle bærekraftige forretningsmodeller."
     }
 ]
