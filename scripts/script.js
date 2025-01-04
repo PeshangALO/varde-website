@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.getElementById("copyright");
-    copyrightElement.innerHTML = `&copy; ${currentYear} Varde `;
+    copyrightElement.innerHTML = `&copy; ${currentYear} Varde Tech AS `;
 });
 
 document.addEventListener('DOMContentLoaded', function() {
