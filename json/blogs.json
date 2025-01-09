@@ -1,5 +1,12 @@
 [
     {
+        "image": "images/blog/FMA.png",
+        "title": "Støtte fra Forskningsmobilisering Agder (FMA)",
+        "date": "2025-01-09",
+        "description": "Vi er stolte over å ha mottatt støtte fra Forskningsmobilisering Agder til vårt forprosjekt! Denne støtten gir oss mulighet til å videreutvikle vår algoritme for prediksjon av blodglukosenivå med fokus på forklarbarhet og trygg bruk i medisinsk behandling. Sammen med Universitetet i Agder og Sørlandet sykehus skal vi teste og validere løsningen, med mål om å forbedre beslutningsstøtten for helsepersonell. Vi takker FMA for støtten og ser frem til å starte dette viktige arbeidet!",
+        "photoCreds": ""
+    },
+    {
         "image": "images/blog/skattefunn.jpg",
         "title": "Tildeling av Skattefunn",
         "date": "2024-12-27",
