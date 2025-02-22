@@ -108,6 +108,14 @@ nav{
     padding: 1rem 2rem 1rem 2rem;
 }
 
+/* Ensure all navigation links have the same font size */
+.nav-links {
+    font-size: 16px; /* Set the desired font size */
+    font-family: Arial, sans-serif; /* Optional: Set a consistent font family */
+    text-decoration: none; /* Optional: Remove underline */
+    color: #fff; /* Optional: Set a consistent color */
+}
+
 .hamburger-parent{
     display: none;
 }

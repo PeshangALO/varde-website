@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const blogDate = document.createElement('h6');
                 blogDate.classList.add('blog-info');
-                blogDate.textContent = new Date(blog.date).toLocaleDateString('en-US', {
+                blogDate.textContent = new Date(blog.date).toLocaleDateString('no-NO', {
                     year: 'numeric', month: 'long', day: 'numeric'
-        
                 });
 
                 blogInfo.appendChild(pictureCred);
