@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     copyrightElement.innerHTML = `&copy; ${currentYear} Varde Tech AS `;
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    //Navigation bar script. 
+document.addEventListener('DOMContentLoaded', function() { 
     const navLogo = `images/varde-logo-white.png`;
     
     const navHTML = `
@@ -15,17 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
         </div>
         <ul role="menubar">
-            <li><a class="nav-button" role="menuitem" href="./index.html#home">Hjem</a></li>
-            <li><a class="nav-button" role="menuitem" href="./about-varde.html">Om Oss</a></li>
-            <li><a class="nav-button" role="menuitem" href="./index.html#the-team" id="team-link">Teamet</a></li>
+            <li><a class="nav-button" role="menuitem" href="./VardeT0.html">Varde T0</a></li>
+            <li><a class="nav-button" role="menuitem" href="./VardeT1.html">Varde T1</a></li>
             <li><a class="nav-button" role="menuitem" href="./blog.html">Blogg</a></li>
-            <li><a class="nav-button" role="menuitem" href="#contact">Kontakt</a></li>
+            <li><a class="nav-button" role="menuitem" href="#contact">Kontakt oss</a></li>
         </ul>
     `;
     
 const hamburgerNav = `
-            <nav class="hamburger-parent">
-                <a href="index.html"><img src=${navLogo}></a>            
+            <nav class="hamburger-parent" aria-label="Toggle navigation menu" aria-expanded="false">
+                <a href="index.html"><img src=${navLogo} alt="Varde logo"></a>            
                 <button class="hamburger-menu" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
                   <span></span>
                   <span></span>
@@ -34,11 +32,10 @@ const hamburgerNav = `
               </nav>
               <div id="mobile-menu" class="off-screen-menu" hidden>
                 <ul role="menubar">
-                  <li><a class="nav-links" role="menuitem" href="./index.html">Hjem</a></li>
-                  <li><a class="nav-links" role="menuitem" href="./about-varde.html">Om Oss</a></li>
-                  <li><a class="nav-links" role="menuitem" href="./index.html#the-team" id="team-link">Teamet</a></li>
-                  <li><a class="nav-links" role="menuitem" href="blog.html">Blogg</a></li>
-                  <li><a class="nav-links" role="menuitem" href="#contact">Kontakt</a></li>
+                    <li><a class="nav-links" role="menuitem" href="./vardeT0.html">Varde T0</a></li>
+                    <li><a class="nav-links" role="menuitem" href="./vardeT1.html">Varde T1</a></li>
+                    <li><a class="nav-links" role="menuitem" href="blog.html">Blogg</a></li>
+                    <li><a class="nav-links" role="menuitem" href="#contact">Kontakt</a></li>
                 </ul>
               </div>
 `;
@@ -50,14 +47,6 @@ const hamburgerNav = `
 
     const navElement = document.getElementById("nav-container");
     navElement.innerHTML = navHTML;
-
-    const teamLink = document.getElementById('team-link');
-    
-    if (currentPath.includes("index.html") || currentPath === "/") {
-        teamLink.href = "#the-team";  // Scroll directly to the section if on index.html
-    } else {
-        teamLink.href = "./index.html#the-team"; // Redirect to index.html with #the-team
-    }
 });
 
 

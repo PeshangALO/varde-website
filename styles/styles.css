@@ -108,12 +108,10 @@ nav{
     padding: 1rem 2rem 1rem 2rem;
 }
 
-/* Ensure all navigation links have the same font size */
 .nav-links {
-    font-size: 16px; /* Set the desired font size */
-    font-family: Arial, sans-serif; /* Optional: Set a consistent font family */
-    text-decoration: none; /* Optional: Remove underline */
-    color: #fff; /* Optional: Set a consistent color */
+    font-size: 1.5rem;
+    text-decoration: none; 
+    color: #fff; 
 }
 
 .hamburger-parent{
@@ -364,6 +362,8 @@ li{
     .logo-wrapper{
         display: flex;
         justify-content: center;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
     .logo{
@@ -559,7 +559,7 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 2rem 1rem 5rem 1rem;
+    margin: 2rem 1rem 0rem 1rem;
 }
 
 
