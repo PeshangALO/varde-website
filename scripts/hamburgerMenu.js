@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.getElementById("mobile-menu");
     const hamNav = document.querySelectorAll(".nav-links");
 
+    hamNav.forEach(link => {
+        const linkUrl = new URL(link.href, window.location.origin);
+        const currentUrl = new URL(window.location.href);
+    
+        if (linkUrl.pathname === currentUrl.pathname) {
+            link.setAttribute("aria-current", "page");
+        }
+    });
+
 hamburgerMenu.addEventListener("click", () => {
         const expanded = hamburgerMenu.getAttribute("aria-expanded") === "true" || false;
         hamburgerMenu.setAttribute("aria-expanded", !expanded);

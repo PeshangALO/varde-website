@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="description"
         content="Hva er Varde? Les nedenfor for å forstå hvorfor og hvordan Varde planlegger å forbedre diabeteshelse.">
     <meta name="keywords"
@@ -19,11 +19,11 @@
     <meta property="og:url" content="https://varde.ai/about-varde.html">
     <meta property="og:type" content="website">
 
-    <title>Varde - Om Vår Løsning</title>
+    <title>Varde - Om Varde T0</title>
     <link rel="icon" type="image/x-icon" href="./images/varde-favicon.png?v=1">
     <link rel="stylesheet" href="./styles/styles.css?v=1.0.1">
     <!-- Increment if style is updated to forc hard refreach -->
-    <link rel="stylesheet" href="./styles/about-varde.css?v=1">
+    <link rel="stylesheet" href="./styles/VardeT.css?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">
     <!-- Increment if style is updated to forc hard refreach -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,104 +34,53 @@
 </head>
 
 <body>
-    <header class="header-color">
-        <nav id="nav-container"></nav>
+    <header class="header-color" role="banner">
+        <nav id="nav-container" role="navigation" aria-label="Main Navigation">
+        </nav>
 
-        <nav id="hamburger-menu"></nav>
+        <nav id="hamburger-menu"aria-label="Mobile Navigation"></nav>
     </header>
 
     <main>
-        <section id="about-hero-section" tabindex="0" alt="Hero section for about Varde page.">
-            <div id="about-title-wrapper">
-                <h1 id="title-start">
+        <section class="about-hero-section" tabindex="0" alt="Hero section for about Varde page.">
+            <div class="about-title-wrapper">
+                <h1 class="title-start">
                     Hva er
                 </h1>
-                <img src="./images/varde-logo-only-text.png?v=1" alt="Varde">
-                <h1 id="title-end">
-                    ?
+                <img src="./images/varde-logo-only-text.png?v=1" alt="Varde logo, tekstbasert">
+                <h1 class="title-end">
+                    T0?
                 </h1>
             </div>
-            <img class="varde-transparent-logo" src="./images/varde-transparent-logo-orange.png">
+                <div class="varde-t-text">
+                    <p>Varde T0 er en smart løsning for deg som lever med diabetes og ønsker bedre kontroll over blodsukkeret. </p> 
+                    
+                    <p>Ved å koble til eksisterende sensorer gir systemet sanntidsavlesning av glukosenivå, med mulighet for egne varsler samt automatisk varsling ved raske endringer. Varde gir deg verdifull innsikt ved å visualisere glukosedata, aktivitetsnivå og insulinbruk – enkelt, trygt og alltid tilgjengelig. 
+                    </p> 
+                    <p>T0 er første versjon av appen vår, som vi planlegger å lansere rundt sommeren 2025. Vi er også i prosessen med å få CE-merket som en SWMD i henhold til MDR som et Class I produkt.</p> 
+                </div>    
         </section>
 
-        <section id="the-problem-section" tabindex="0" alt="A description of the challenges with diabetes.">
-            <h2>Problemet</h2>
-            <h6>Hvis man har Diabetes, betyr det at kroppen ikke har nok egenprodusert insulin til å holde et stabilt
-                glukosenivå.</h6>
-            <div class="percentage-world-pop-wrapper">
-                <div class="statement-wrapper">
-                    <h6>Andel av jordens befolkning med diabetes (alle typer):</h6>
-                </div>
-                <div class="percentage-wrapper">
-                    <p>ca 6,7%</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="common-symptoms-section">
-
-            <h3 class="symptom-header" tabindex="0">Noen av senkomplikasjonene ved diabetes inkluderer:</h3>
-            <div id="all-symptoms">
-                <div class="symptom-wrapper">
-                    <div class="symptom-text-wrapper">
-                        <h5>Nerveskade</h5>
-                    </div>
-                    <img src="./images/nerve.png">
-                </div>
-
-                <div class="symptom-wrapper left-column">
-                    <div class="symptom-text-wrapper">
-                        <h5>Nyreskade</h5>
-                    </div>
-                    <img src="./images/Kidney.png">
-                </div>
-
-                <div class="symptom-wrapper">
-                    <div class="symptom-text-wrapper">
-                        <h5>Kardiovaskulære Komplikasjoner</h5>
-                    </div>
-                    <img src="./images/Heart.png">
-                </div>
-
-                <div class="symptom-wrapper left-column">
-                    <div class="symptom-text-wrapper">
-                        <h5>Retinopati (blindhet)</h5>
-                    </div>
-                    <img src="./images/Eye.png">
-                </div>
-            </div>
-
-            <div class="final-statement-wrapper" tabindex="0">
-                <h4>Å stabilisere glukosenivået er en konstant balansegang.</h4>
-                <h3>Selv med moderne insulinkalkulatorer, ender folk fortsatt opp med komplikasjoner!</h3>
-            </div>
-            <img class="uphill-battle-img" src="./images/Sisyphus.png">
-        </section>
-
-        <div class="solution-divider section-divider">
-            <img src="./section-dividers/light-blue-divider.svg">
-        </div>
-
-        <section id="our-solution">
-
+        <section id="our-solution-t0">
             <div class="our-solution-header-wrapper" tabindex="0">
-                <h2 class="section-title">Vår Løsning</h2>
+                <h2 class="section-title">Hvordan det fungerer</h2>
                 <img src="./images/varde-only-logo.png">
             </div>
 
             <div id="the-solutions-container">
 
                 <div class="solution-wrapper">
-                    <img src="./images/scan-picture.png">
+                    <img src="./images/T0-GlucoseLevels.png">
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">1.</h4>
-                            <h4 class="solution-step-title">Skan</h4>
+                            <h4 class="solution-step-title">Oversikt</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Ved å ta et bilde av måltidet ditt, beregner algoritmen i appen karbohydratinnholdet
-                                samtidig som den tar hensyn til andre viktige variabler som porsjonsstørrelse og mattype
-                                fra glykemisk indeks.</p>
+                            <p>
+                                Diabetes krever oppmerksomhet. Derfor vil vi gjøre det enklere gjennom sanntidsavlesningen av glukoseverdier. Du kan også navigere tilbake i tid for å se tidligere glukosenivåer.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -140,34 +89,32 @@
                     <div class="solution-text-wrapper place-text-midd" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">2.</h4>
-                            <h4 class="solution-step-title">Prediker</h4>
+                            <h4 class="solution-step-title">Varsler</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Ved å bruke disse dataene analyserer vår KI-modell glukosetrendene dine og forutsier
-                                nivåene dine opptil
-                                4 timer frem i tid,
-                                basert på nylig aktivitet, insulinbruk, måltidsinntak og andre viktige faktorer.</p>
-                        </div>
+                            <p>
+                                Alle håndterer diabetes på forskjellige måter. Varde lar deg bestemme når og hvilke varsler som skal være aktive. 
+                            </p>
+                            </div>
                     </div>
-                    <img src="./images/predict-picture.png">
+                    <img src="./images/T0-GlucoseAlarms.png">
                 </div>
 
                 <div class="solution-wrapper">
-                    <img src="./images/recommend-picture.png">
+                    <img src="./images/T0-GlucoseAdjust.png">
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">3.</h4>
-                            <h4 class="solution-step-title">Anbefal</h4>
+                            <h4 class="solution-step-title">Kontroll</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Our AI then provides personalized insulin dosage recommendations tailored to your
-                                predicted glucose levels and individual needs.</p>
+                            <p>Dette er bare noen av funksjonene som gjør Varde til ditt personlige verktøy. Varde T0 skal være en applikasjon som er tilpasset den enkeltes behov. Fra valg av varsler, samt hvordan du ser på dataen, Varde ønsker å gi kontroll til brukeren.</p>
                         </div>
                     </div>
                 </div>
 
                 <div id="beta-user-button">
-                    <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button">Bli beta tester</a>
+                    <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde">Bli beta tester</a>
                 </div>
             </div>
 
@@ -179,13 +126,13 @@
         <section id="partners" class="partners" aria-label="Links to Varde collaborators website">
             <div class="partners-container">
                 <a href="https://www.innovasjonnorge.no" target="_blank">
-                    <img src="images/IN_Logo_Eng.png" alt="Partner 1 Logo" class="partner-logo">
+                    <img src="images/IN_Logo_Eng.png" alt="Logo for Innovasjon Norge, partner" class="partner-logo">
                 </a>
-                <a href="https://www.innoventussor.no" target="_blank">
-                    <img src="images/innoventus_sør_logo.png" alt="Partner 2 Logo" class="partner-logo">
+                <a href="https://www.innoventussor.no" target="_blank" >
+                    <img src="images/innoventus_sør_logo.png" alt="Logo for Innoventus Sør, partner" class="partner-logo">
                 </a>
                 <a href="https://uia.no" target="_blank">
-                    <img src="images/logoUiA.png" alt="Partner 3 Logo" class="partner-logo">
+                    <img src="images/logoUiA.png" alt="Logo for Universitetet i Agder, partner" class="partner-logo">
                 </a>
             </div>
         </section>
