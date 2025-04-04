@@ -32,8 +32,8 @@ const hamburgerNav = `
               </nav>
               <div id="mobile-menu" class="off-screen-menu" hidden>
                 <ul role="menubar">
-                    <li><a class="nav-links" role="menuitem" href="./vardeT0.html">Varde T0</a></li>
-                    <li><a class="nav-links" role="menuitem" href="./vardeT1.html">Varde T1</a></li>
+                    <li><a class="nav-links" role="menuitem" href="./VardeT0.html">Varde T0</a></li>
+                    <li><a class="nav-links" role="menuitem" href="./VardeT1.html">Varde T1</a></li>
                     <li><a class="nav-links" role="menuitem" href="blog.html">Blogg</a></li>
                     <li><a class="nav-links" role="menuitem" href="#contact">Kontakt</a></li>
                 </ul>
