@@ -93,7 +93,8 @@ nav{
 .section-description{
     font-family: var(--karma);
     font-size: 1.5rem;
-    max-width: 60rem; 
+    max-width: 60rem;
+    margin: auto;
 }
 
 #nav-container {
