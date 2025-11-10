@@ -31,6 +31,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
         rel="stylesheet">
+        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+
 </head>
 
 <body>
@@ -44,27 +48,23 @@
     <main>
         <section class="about-hero-section" tabindex="0" alt="Hero section for about Varde page.">
             <div class="about-title-wrapper">
-                <h1 class="title-start">
-                    Hva er
-                </h1>
+                <h1 class="title-start" data-i18n="t0.title_prefix">Hva er</h1>
                 <img src="./images/varde-logo-only-text.png?v=1" alt="Varde logo, tekstbasert">
-                <h1 class="title-end">
-                    T0?
-                </h1>
+                <h1 class="title-end">T0?</h1>
             </div>
                 <div class="varde-t-text">
-                    <p>Varde T0 er en smart løsning for deg som lever med diabetes og ønsker bedre kontroll over glukosenivået. </p> 
+                    <p data-i18n="t0.p1">Varde T0 er en smart løsning for deg som lever med diabetes og ønsker bedre kontroll over glukosenivået. </p> 
                     
-                    <p>Ved å koble til eksisterende sensorer gir systemet sanntidsavlesning av glukosenivå, med mulighet for egne varsler samt automatisk varsling ved raske endringer. Varde gir deg verdifull innsikt ved å visualisere glukosedata, aktivitetsnivå og insulinbruk – enkelt, trygt og alltid tilgjengelig. 
+                    <p data-i18n="t0.p2">Ved å koble til eksisterende sensorer gir systemet sanntidsavlesning av glukosenivå, med mulighet for egne varsler samt automatisk varsling ved raske endringer. Varde gir deg verdifull innsikt ved å visualisere glukosedata, aktivitetsnivå og insulinbruk – enkelt, trygt og alltid tilgjengelig. 
                     </p> 
-                    <p>T0 er første versjon av appen vår, som vi planlegger å lansere rundt sommeren 2025. Vi er også i prosessen med å få CE-merket som en SWMD i henhold til MDR som et Class I produkt.</p> 
+                    <p data-i18n="t0.p3">T0 er første versjon av appen vår, som vi planlegger å lansere rundt sommeren 2025. Vi er også i prosessen med å få CE-merket som en SWMD i henhold til MDR som et Class I produkt.</p> 
                 </div>    
         </section>
 
 
         <section id="our-solution-t0">
             <div class="our-solution-header-wrapper" tabindex="0">
-                <h2 class="section-title">Hvordan det fungerer</h2>
+                <h2 class="section-title" data-i18n="t0.how_it_works">Hvordan det fungerer</h2>
                 <img src="./images/varde-only-logo.png">
             </div>
 
@@ -75,12 +75,11 @@
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">1.</h4>
-                            <h4 class="solution-step-title">Oversikt</h4>
+                            <h4 class="solution-step-title" data-i18n="t0.step1_title">Oversikt</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>
-                                Diabetes krever oppmerksomhet. Derfor vil vi gjøre det enklere gjennom sanntidsavlesningen av glukoseverdier. Du kan også navigere tilbake i tid for å se tidligere glukosenivåer.
-                            </p>
+                            <p data-i18n="t0.step1_desc">Diabetes krever oppmerksomhet. Derfor vil vi gjøre det enklere gjennom
+                                 sanntidsavlesningen av glukoseverdier. Du kan også navigere tilbake i tid for å se tidligere glukosenivåer.</p>
                         </div>
                     </div>
                 </div>
@@ -89,12 +88,11 @@
                     <div class="solution-text-wrapper place-text-midd" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">2.</h4>
-                            <h4 class="solution-step-title">Varsler</h4>
+                            <h4 class="solution-step-title" data-i18n="t0.step2_title">Varsler</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>
-                                Alle håndterer diabetes på forskjellige måter. Varde lar deg bestemme når og hvilke varsler som skal være aktive. 
-                            </p>
+                            <p data-i18n="t0.step2_desc">Alle håndterer diabetes på forskjellige måter.
+                                 Varde lar deg bestemme når og hvilke varsler som skal være aktive.</p>
                             </div>
                     </div>
                     <img src="./images/T0-GlucoseAlarms.png">
@@ -105,16 +103,18 @@
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">3.</h4>
-                            <h4 class="solution-step-title">Kontroll</h4>
+                            <h4 class="solution-step-title" data-i18n="t0.step3_title">Kontroll</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Dette er bare noen av funksjonene som gjør Varde til ditt personlige verktøy. Varde T0 skal være en applikasjon som er tilpasset den enkeltes behov. Fra valg av varsler, samt hvordan du ser på dataen, Varde ønsker å gi kontroll til brukeren.</p>
+                            <p data-i18n="t0.step3_desc">Dette er bare noen av funksjonene som gjør Varde til ditt personlige verktøy.¨
+                                 Varde T0 skal være en applikasjon som er tilpasset den enkeltes behov. Fra valg av varsler, samt hvordan 
+                                 du ser på dataen, Varde ønsker å gi kontroll til brukeren.</p>
                         </div>
                     </div>
                 </div>
 
                 <div id="beta-user-button">
-                    <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde">Bli beta tester</a>
+                    <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde" data-i18n="common.beta_cta">Bli beta tester</a>
                 </div>
             </div>
 
@@ -147,6 +147,7 @@
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('contact-placeholder').innerHTML = data;
+                        if (window.applyTranslations) window.applyTranslations();
                     })
                     .catch(error => console.error('Error loading contact section:', error));
             }
@@ -166,6 +167,7 @@
     </footer>
     <script src="./scripts/script.js?v=2"></script>
     <script src="./scripts/hamburgerMenu.js?v=2"></script>
+    <script src="./scripts/i18n.js?v=1"></script>
 </body>
 
 </html>

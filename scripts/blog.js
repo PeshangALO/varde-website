@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
             data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             const blogContainer = document.getElementById('blog-container');
+            if (blogContainer) {
+                blogContainer.classList.add('blog-feed');
+            }
             data.forEach(blog => {
                 const blogItem = document.createElement('div');
                 blogItem.classList.add('blog-item');
@@ -21,11 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const blogTitle = document.createElement('h2');
                 blogTitle.textContent = blog.title;
 
-                    const pictureCred = document.createElement('h6');
-                    pictureCred.textContent = blog.photoCreds;
-                    pictureCred.classList.add('blog-info');
-                    blogDescription.appendChild(pictureCred);
-        
                 const blogInfo = document.createElement("div");
                 blogInfo.classList.add("blog-info-container");
 
@@ -35,7 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     year: 'numeric', month: 'long', day: 'numeric'
                 });
 
-                blogInfo.appendChild(pictureCred);
+                if (blog.photoCreds) {
+                    const pictureCred = document.createElement('h6');
+                    pictureCred.textContent = blog.photoCreds;
+                    pictureCred.classList.add('blog-info');
+                    blogInfo.appendChild(pictureCred);
+                }
+
                 blogInfo.append(blogDate);
 
                 const blogText = document.createElement('p');

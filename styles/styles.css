@@ -7,6 +7,19 @@
 /* Other Styles */
 html{
     scroll-behavior: smooth;
+    font-size: 135%; /* bump base size ~22px */
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 480px){
+    html{
+        font-size: 110%;
+    }
 }
 
 html, body {
@@ -20,6 +33,8 @@ body {
     box-sizing: border-box;
     background-color: #f9f9f9;
     overflow-x: hidden;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .young-serif{
@@ -76,6 +91,52 @@ a{
 .active-button{
     border: 1px solid white;
     transform: translateY(-0.3rem);
+}
+
+/* Language switcher styled like nav buttons */
+.language-switcher{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher::before{
+    content: "";
+    width: 1.75rem;
+    height: 1.1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.language-switcher[data-lang="no"]::before{
+    background-image: url("../images/Flag_of_Norway.png");
+}
+
+.language-switcher[data-lang="en"]::before{
+    background-image: url("../images/Flag_of_the_United_Kingdom_(3-5).svg.png");
+}
+
+.language-switcher select{
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(16, 24, 40, 1);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+    cursor: pointer;
+    appearance: none;
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus{
+    transition: 0.2s;
+    border: 1px solid white;
+    box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(222, 246, 246, 1);
+    transform: translateY(-0.3rem);
+    outline: none;
 }
 
 
@@ -263,7 +324,7 @@ li{
 }
 
 .header-logo {
-    max-width: 7rem; /* Reduced size for smaller header */
+    max-width: 7rem; 
 }
 
 @media(max-width: 767px){
@@ -290,7 +351,7 @@ li{
 
 .logo {
     max-width: 45rem;
-    margin-left: -10rem; /* This can be adjusted or removed based on design */
+    margin-left: -10rem; 
 }
 
 .hero-text-container {
@@ -312,12 +373,13 @@ li{
 }
 
 .beta-button {
-    padding: 15px 30px;
+    padding: 1.1rem 2.4rem;
     background-color: #FF6347;
     color: white;
     border-radius: 10px;
-    font-size: 1.3em;
+    font-size: 1.35rem;
     font-family: var(--koho);
+    letter-spacing: 0.03em;
 }
 
 .title {
@@ -435,7 +497,7 @@ li{
 /*----------ABOUT SECTION-------------*/
 /*------------------------------------*/
 .section-divider img{
-    display: block; /* Ensures no extra space below the image */
+    display: block; 
     line-height: 0; 
     width: 100%;
 }
@@ -748,7 +810,7 @@ li{
 .latest-blog-container h4 {
     font-family: var(--kant-pro);
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-align: right;
 }
 
@@ -804,15 +866,16 @@ li{
 }
 
 #read-blog-button {
-    padding: 15px 30px;
+    padding: 1.1rem 2.4rem;
     background-color: rgba(222, 246, 246, 1);
     color: #000;
     text-decoration: none;
     border-radius: 10px;
     font-family: var(--koho);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 5rem;
+    letter-spacing: 0.03em;
 }
 
 
@@ -869,57 +932,64 @@ li{
     margin-bottom: 5rem;
 }
 
-.blog-item {
+.blog-feed{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
     align-items: center;
-    margin-bottom: 6rem;
-    gap: 2rem;
-    height: 250px;
+    width: min(1200px, 95vw);
+    margin: 0 auto 6rem;
+}
+
+.blog-item {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 3.8rem;
+    width: 100%;
 }
 
 .blog-image {
-    min-width: 400px; 
-    height: 250px;
-    object-fit: cover; 
-    border-radius: 15px;
-    
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 22px;
 }
 
 .blog-description {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    max-width: 600px; /* Maximum width */
-    margin-right: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    color: #101828;
 }
 
 .blog-description > h2 {
-    font-size: 1.5rem; 
+    font-size: 1.75rem; 
     font-family: var(--kant-pro);
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
 }
 
 .blog-info-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .blog-info {
     font-family: var(--kant-pro);
-    font-weight: 400;
-    font-size: 0.7rem; /* Ensure consistent date size */
-    color: #000000;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: rgba(16, 24, 40, 0.65);
     margin: 0;
 }
 
 .blog-description > p {
-    margin: 0.5rem 0; /* Consistent margin for paragraphs */
-    font-size: 1em; /* Ensure consistent text size */
-    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
     font-family: var(--karma);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .blog-description p a {
@@ -1041,18 +1111,22 @@ nav.active {
 
 @media (max-width: 950px) {
 
-    .blog-item {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+    .blog-feed{
+        width: min(96vw, 900px);
+        gap: 4rem;
     }
 
-    .blog-image,
+    .blog-item {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .blog-image{
+        height: 260px;
+    }
+
     .blog-description {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .contact-container {
@@ -1069,8 +1143,16 @@ nav.active {
         font-size: 0.9em;
     }
 
+    .blog-feed{
+        gap: 3rem;
+    }
+
+    .blog-item{
+        gap: 1.5rem;
+    }
+
     .blog-description h2 {
-        font-size: 1.2em;
+        font-size: 1.5rem;
     }
 
     .blog-description p {

@@ -1,0 +1,67 @@
+{
+  "home": {
+    "title": "Next-Gen Diabetes Tech",
+    "coming_soon": "Under development...",
+    "register_beta": "Sign up for beta access!"
+  },
+  "blog": {
+    "description": "Explore our blog posts to read about highlights from us at Varde Tech.",
+    "read_more": "Read more",
+    "latest_label": "Latest:",
+    "intro": "Explore our blog posts to read about the highlights from us at Varde Tech."
+    
+  },
+  "nav": {
+    "vardeT0": "Varde T0",
+    "vardeT1": "Varde T1",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Varde Tech AS develops advanced digital solutions to support people with diabetes in managing glucose levels safely, predictably, and efficiently. With a unique combination of technological expertise and many years of personal experience with diabetes, our team is dedicated to creating revolutionary tools that improve the quality of life for people with diabetes.",
+    "goal_title": "Our Goal",
+    "goal_text": "Our goal is to improve the daily life of people with diabetes by providing an intuitive and intelligent solution that offers better control over glucose levels, reduces complications, and enhances quality of life.",
+    "what_is_title": "What is Varde T1?",
+    "what_is_text": "Varde T1 is an app that uses our proprietary artificial intelligence to predict glucose levels based on extensive health data. The app provides tailored recommendations for insulin and carbohydrates, and by considering multiple factors, it offers personalized insights that help users manage their diabetes safely and easily."
+  },
+  "team": {
+    "title": "The Team",
+    "description": "The team at Varde combines expertise from multiple disciplines to realize our vision of improving the health of people with diabetes through an innovative AI solution that helps prevent long-term complications."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "org": "Org no",
+    "visit": "Visit",
+    "post": "Mail"
+  },
+  "common": {
+    "beta_cta": "Become a beta tester"
+  },
+  "t0": {
+    "title_prefix": "What is",
+    "how_it_works": "How it works",
+    "p1": "Varde T0 is a smart solution for those living with diabetes who want better control over glucose levels.",
+    "p2": "By connecting to existing sensors, the system provides real-time glucose readings, with customizable alerts and automatic notifications during rapid changes. Varde gives you valuable insights by visualizing glucose data, activity levels, and insulin usage — simple, safe, and always available.",
+    "p3": "T0 is the first version of our app, planned for launch around summer 2025. We are also in the process of CE marking as a SWMD according to MDR as a Class I product.",
+    "step1_title": "Overview",
+    "step1_desc": "Diabetes requires attention. We make it simpler through real-time readings of glucose values. You can also navigate back in time to view previous glucose levels.",
+    "step2_title": "Alerts",
+    "step2_desc": "Everyone manages diabetes differently. Varde lets you decide when and which alerts should be active.",
+    "step3_title": "Control",
+    "step3_desc": "These are just some features that make Varde your personal tool. Varde T0 is designed to be tailored to individual needs. From choosing alerts to how you view data, Varde aims to give control to the user."
+  },
+  "t1": {
+    "title_prefix": "What is",
+    "our_solution": "Our Solution",
+    "p1": "In parallel with T0, we are developing Varde T1 using our proprietary AI to predict glucose levels based on comprehensive health data.",
+    "p2": "The app will provide tailored insulin and carbohydrate recommendations by considering multiple factors. Using the algorithm, T1 adapts to your personal factors and helps manage diabetes safely, predictably, and easily.",
+    "p3": "Varde T1 is the final version of our solution, and we are targeting a launch in early 2028.",
+    "step1_title": "Scan",
+    "step1_desc": "By taking a picture of your meal, the app calculates carbohydrate content while accounting for portion size and food type using the glycemic index.",
+    "step2_title": "Predict",
+    "step2_desc": "Using this data, our AI model analyzes your glucose trends and predicts levels up to 4 hours ahead based on recent activity, insulin usage, meal intake, and other important factors.",
+    "step3_title": "Recommend",
+    "step3_desc": "Our AI then provides personalized insulin dosing recommendations tailored to your expected glucose levels and individual needs."
+  }
+}

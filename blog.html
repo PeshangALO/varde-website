@@ -28,6 +28,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
         rel="stylesheet">
+        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+
 </head>
 
 <body>
@@ -39,13 +43,11 @@
 
     <main>
         <div class="blog-page-header">
-            <h1 class="section-title">Blogg</h1>
-            <p class="section-description">Les våre blogginnlegg for informasjon om nylige aktiviteter, fremgang og
-                suksesser!
-            </p>
+            <h1 class="section-title" data-i18n="nav.blog">Blogg</h1>
+            <p class="section-description" data-i18n="blog.description">Les våre blogginnlegg for informasjon om nylige aktiviteter, fremgang og suksesser!</p>
         </div>
 
-        <div id="blog-container"></div>
+        <div id="blog-container" class="blog-feed"></div>
     </main>
 
     <section id="partners" class="partners" aria-label="Links to Varde collaborators website">
@@ -73,6 +75,7 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('contact-placeholder').innerHTML = data;
+                    if (window.applyTranslations) window.applyTranslations();
                 })
                 .catch(error => console.error('Error loading contact section:', error));
         }
@@ -95,6 +98,7 @@
 
     <script src="./scripts/script.js?v=2"></script>
     <script src="./scripts/blog.js?v=2"></script>
+    <script src="./scripts/i18n.js?v=1"></script>
     <script src="./scripts/hamburgerMenu.js?v=2"></script>
 </body>
 

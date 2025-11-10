@@ -31,6 +31,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
         rel="stylesheet">
+        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+
 </head>
 
 <body>
@@ -43,26 +47,22 @@
     <main>
         <section id="about-t1" class="about-hero-section" tabindex="0" alt=".">
             <div class="about-title-wrapper">
-                <h1 class="title-start">
-                    Hva er
-                </h1>
+                <h1 class="title-start" data-i18n="t1.title_prefix">Hva er</h1>
                 <img src="./images/varde-logo-only-text.png?v=1" alt="Varde logo, tekstbasert">
-                <h1 class="title-end">
-                    T1?
-                </h1>
+                <h1 class="title-end">T1?</h1>
             </div>            
             <div class="varde-t-text">
-                <p>Parallelt med utviklingen av T0 utvikler vi Varde T1 som skal benytte vår egenutviklede kunstige intelligens for å forutsi glukosenivåer basert på omfattende helsedata.</p> 
+                <p data-i18n="t1.p1">Parallelt med utviklingen av T0 utvikler vi Varde T1 som skal benytte vår egenutviklede kunstige intelligens for å forutsi glukosenivåer basert på omfattende helsedata.</p> 
                 
-                <p>Appen vil gi skreddersydde anbefalinger om insulin og karbohydrater ved å ta hensyn til flere faktorer. Ved hjelp av algoritmen vil T1 tilpasse seg dine personlige faktorer, og bidra med å håndtere diabetes trygt, forutsigbart og enkelt.                 </p> 
-                <p>Varde T1 er den endelige versjonen av løsningen vår, og vi sikter på lansering I begynnelsen av 2028. </p>    
+                <p data-i18n="t1.p2">Appen vil gi skreddersydde anbefalinger om insulin og karbohydrater ved å ta hensyn til flere faktorer. Ved hjelp av algoritmen vil T1 tilpasse seg dine personlige faktorer, og bidra med å håndtere diabetes trygt, forutsigbart og enkelt.</p> 
+                <p data-i18n="t1.p3">Varde T1 er den endelige versjonen av løsningen vår, og vi sikter på lansering I begynnelsen av 2028.</p>    
             </div>  
         </section>
             
         <section id="our-solution-t1">
 
             <div class="our-solution-header-wrapper" tabindex="0">
-                <h2 class="section-title">Vår Løsning</h2>
+                <h2 class="section-title" data-i18n="t1.our_solution">Vår Løsning</h2>
                 <img src="./images/varde-only-logo.png" alt="Varde logo">
             </div>
 
@@ -73,12 +73,11 @@
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">1.</h4>
-                            <h4 class="solution-step-title">Skan</h4>
+                            <h4 class="solution-step-title" data-i18n="t1.step1_title">Skan</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Ved å ta et bilde av måltidet ditt, beregner algoritmen i appen karbohydratinnholdet
-                                samtidig som den tar hensyn til andre viktige variabler som porsjonsstørrelse og mattype
-                                fra glykemisk indeks.</p>
+                            <p data-i18n="t1.step1_desc">Ved å ta et bilde av måltidet ditt, beregner algoritmen i appen karbohydratinnholdet 
+                                samtidig som den tar hensyn til andre viktige variabler som porsjonsstørrelse og mattype fra glykemisk indeks.</p>
                         </div>
                     </div>
                 </div>
@@ -87,13 +86,10 @@
                     <div class="solution-text-wrapper place-text-midd" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">2.</h4>
-                            <h4 class="solution-step-title">Prediker</h4>
+                            <h4 class="solution-step-title" data-i18n="t1.step2_title">Prediker</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Ved å bruke disse dataene analyserer vår KI-modell glukosetrendene dine og forutsier
-                                nivåene dine opptil
-                                4 timer frem i tid,
-                                basert på nylig aktivitet, insulinbruk, måltidsinntak og andre viktige faktorer.</p>
+                            <p data-i18n="t1.step2_desc">Ved å bruke disse dataene analyserer vår KI-modell glukosetrendene dine og forutsier nivåene dine opptil 4 timer frem i tid, basert på nylig aktivitet, insulinbruk, måltidsinntak og andre viktige faktorer.</p>
                         </div>
                     </div>
                     <img src="./images/predict-picture.png" alt="Bilde som illustrerer prediksjon av glukosenivåer basert på data">
@@ -104,16 +100,15 @@
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">3.</h4>
-                            <h4 class="solution-step-title">Anbefal</h4>
+                            <h4 class="solution-step-title" data-i18n="t1.step3_title">Anbefal</h4>
                         </div>
                         <div class="solution-description-wrapper">
-                            <p>Vår AI gir deretter personlige anbefalinger for insulindosering tilpasset dine
-                                forventede glukosenivåer og individuelle behov.</p>
+                            <p data-i18n="t1.step3_desc">Vår AI gir deretter personlige anbefalinger for insulindosering tilpasset dine forventede glukosenivåer og individuelle behov.</p>
                         </div>
                     </div>
                 </div>
 
-                <a id="beta-user-button" href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde">Bli beta tester</a>
+                <a id="beta-user-button" href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde" data-i18n="common.beta_cta">Bli beta tester</a>
             </div>
             
             <div id="bottom-logo">
@@ -145,6 +140,7 @@
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('contact-placeholder').innerHTML = data;
+                        if (window.applyTranslations) window.applyTranslations();
                     })
                     .catch(error => console.error('Error loading contact section:', error));
             }
@@ -164,6 +160,7 @@
     </footer>
     <script src="./scripts/script.js?v=2"></script>
     <script src="./scripts/hamburgerMenu.js?v=2"></script>
+    <script src="./scripts/i18n.js?v=1"></script>
 </body>
 
 </html>

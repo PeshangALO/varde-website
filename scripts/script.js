@@ -14,10 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
         </div>
         <ul role="menubar">
-            <li><a class="nav-button" role="menuitem" href="./VardeT0.html">Varde T0</a></li>
-            <li><a class="nav-button" role="menuitem" href="./VardeT1.html">Varde T1</a></li>
-            <li><a class="nav-button" role="menuitem" href="./blog.html">Blogg</a></li>
-            <li><a class="nav-button" role="menuitem" href="#contact">Kontakt oss</a></li>
+            <li class="language-switcher desktop-language-switcher" data-lang="no">
+                <select id="language-switcher" aria-label="Select Language">
+                    <option value="no">NO</option>
+                    <option value="en">EN</option>
+                </select>
+            </li>
+            <li><a class="nav-button" role="menuitem" data-i18n="nav.vardeT0" href="./VardeT0.html">Varde T0</a></li>
+            <li><a class="nav-button" role="menuitem" data-i18n="nav.vardeT1" href="./VardeT1.html">Varde T1</a></li>
+            <li><a class="nav-button" role="menuitem" data-i18n="nav.blog" href="./blog.html">Blogg</a></li>
+            <li><a class="nav-button" role="menuitem" data-i18n="nav.contact" href="#contact">Kontakt oss</a></li>
+            
         </ul>
     `;
     
@@ -32,10 +39,16 @@ const hamburgerNav = `
               </nav>
               <div id="mobile-menu" class="off-screen-menu" hidden>
                 <ul role="menubar">
-                    <li><a class="nav-links" role="menuitem" href="./VardeT0.html">Varde T0</a></li>
-                    <li><a class="nav-links" role="menuitem" href="./VardeT1.html">Varde T1</a></li>
-                    <li><a class="nav-links" role="menuitem" href="blog.html">Blogg</a></li>
-                    <li><a class="nav-links" role="menuitem" href="#contact">Kontakt</a></li>
+                    <li class="language-switcher mobile-language-switcher" data-lang="no">
+                        <select id="language-switcher-mobile" aria-label="Select Language">
+                            <option value="no">NO</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </li>
+                    <li><a class="nav-links" role="menuitem" data-i18n="nav.vardeT0" href="./VardeT0.html">Varde T0</a></li>
+                    <li><a class="nav-links" role="menuitem" data-i18n="nav.vardeT1" href="./VardeT1.html">Varde T1</a></li>
+                    <li><a class="nav-links" role="menuitem" data-i18n="nav.blog" href="blog.html">Blogg</a></li>
+                    <li><a class="nav-links" role="menuitem" data-i18n="nav.contact" href="#contact">Kontakt</a></li>
                 </ul>
               </div>
 `;
@@ -47,6 +60,44 @@ const hamburgerNav = `
 
     const navElement = document.getElementById("nav-container");
     navElement.innerHTML = navHTML;
+
+    const desktopWrapper = document.querySelector('.desktop-language-switcher');
+    const mobileWrapper = document.querySelector('.mobile-language-switcher');
+    const mainLangSelect = document.getElementById('language-switcher');
+    const mobileLangSelect = document.getElementById('language-switcher-mobile');
+
+    function setWrapperLang(lang) {
+        const normalized = lang.startsWith('en') ? 'en' : 'no';
+        if (desktopWrapper) desktopWrapper.setAttribute('data-lang', normalized);
+        if (mobileWrapper) mobileWrapper.setAttribute('data-lang', normalized);
+    }
+
+    if (mainLangSelect) {
+        mainLangSelect.addEventListener('change', (event) => {
+            const chosen = event.target.value;
+            if (mobileLangSelect && mobileLangSelect.value !== chosen) {
+                mobileLangSelect.value = chosen;
+            }
+            setWrapperLang(chosen);
+        });
+    }
+
+    if (mobileLangSelect) {
+        mobileLangSelect.addEventListener('change', (event) => {
+            const chosen = event.target.value;
+            if (mainLangSelect && mainLangSelect.value !== chosen) {
+                mainLangSelect.value = chosen;
+                mainLangSelect.dispatchEvent(new Event('change'));
+            }
+            setWrapperLang(chosen);
+        });
+    }
+
+    const storedLang = localStorage.getItem('i18nextLng');
+    const initialLang = storedLang ? (storedLang.startsWith('en') ? 'en' : 'no') : (mainLangSelect ? mainLangSelect.value : 'no');
+    if (mainLangSelect) mainLangSelect.value = initialLang;
+    if (mobileLangSelect) mobileLangSelect.value = initialLang;
+    setWrapperLang(initialLang);
 });
 
 
