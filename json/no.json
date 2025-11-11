@@ -1,0 +1,67 @@
+{
+  "home": {
+    "title": "Neste generasjons Diabetes tech",
+    "coming_soon": "Under utvikling...",
+    "register_beta": "Registrer deg hvis du vil bli betatester!"
+  },
+  "blog": {
+    "description": "Les våre blogginnlegg for informasjon om nylige aktiviteter, fremgang og suksesser!",
+    "read_more": "Les mer",
+    "latest_label": "Siste:",
+    "intro": "Utforsk våre blogginnlegg for å lese om høydepunktene fra oss i Varde Tech."
+  },
+  "nav": {
+    "vardeT0": "Varde T0",
+    "vardeT1": "Varde T1",
+    "blog": "Blogg",
+    "contact": "Kontakt oss"
+    
+  },
+  "about": {
+    "title": "Om oss",
+    "description": "Varde tech AS utvikler avanserte digitale løsninger for å støtte personer med diabetes i å håndtere glukosenivåene trygt, forutsigbart og effektivt. Med en unik kombinasjon av teknologisk ekspertise og mange års personlig erfaring med diabetes, er teamet vårt dedikert til å skape revolusjonerende verktøy som forbedrer livskvaliteten til personer med diabetes.",
+    "goal_title": "Vårt Mål",
+    "goal_text": "Vårt mål er å forbedre hverdagen til personer med diabetes ved å levere en intuitiv og intelligent løsning som gir bedre kontroll over glukosenivået, reduserer komplikasjoner og styrker brukerens livskvalitet.",
+    "what_is_title": "Hva er Varde T1?",
+    "what_is_text": "Varde T1 er en app som benytter vår egenutviklede kunstige intelligens for å forutsi glukosenivåer basert på omfattende helsedata. Appen gir skreddersydde anbefalinger om insulin og karbohydrater, og ved å ta hensyn til flere faktorer, tilbyr den personlige innsikter som hjelper brukerne med å håndtere sin diabetes trygt og enkelt."
+  },
+  "team": {
+    "title": "Teamet",
+    "description": "Teamet i Varde forener ekspertise fra ulike fagområder for å realisere vår visjon om å forbedre helsen til personer med diabetes, ved å tilby en innovativ KI-løsning som bidrar til å forebygge langtidskomplikasjoner."
+  },
+  "contact": {
+    "title": "Kontakt oss",
+    "org": "Org nr",
+    "visit": "Besøk",
+    "post": "Post"
+  },
+  "common": {
+    "beta_cta": "Bli beta tester"
+  },
+  "t0": {
+    "title_prefix": "Hva er",
+    "how_it_works": "Hvordan det fungerer",
+    "p1": "Varde T0 er en smart løsning for deg som lever med diabetes og ønsker bedre kontroll over glukosenivået.",
+    "p2": "Ved å koble til eksisterende sensorer gir systemet sanntidsavlesning av glukosenivå, med mulighet for egne varsler samt automatisk varsling ved raske endringer. Varde gir deg verdifull innsikt ved å visualisere glukosedata, aktivitetsnivå og insulinbruk – enkelt, trygt og alltid tilgjengelig.",
+    "p3": "T0 er første versjon av appen vår, som vi planlegger å lansere rundt sommeren 2025. Vi er også i prosessen med å få CE-merket som en SWMD i henhold til MDR som et Class I produkt.",
+    "step1_title": "Oversikt",
+    "step1_desc": "Diabetes krever oppmerksomhet. Derfor vil vi gjøre det enklere gjennom sanntidsavlesningen av glukoseverdier. Du kan også navigere tilbake i tid for å se tidligere glukosenivåer.",
+    "step2_title": "Varsler",
+    "step2_desc": "Alle håndterer diabetes på forskjellige måter. Varde lar deg bestemme når og hvilke varsler som skal være aktive.",
+    "step3_title": "Kontroll",
+    "step3_desc": "Dette er bare noen av funksjonene som gjør Varde til ditt personlige verktøy. Varde T0 skal være en applikasjon som er tilpasset den enkeltes behov. Fra valg av varsler, samt hvordan du ser på dataen, Varde ønsker å gi kontroll til brukeren."
+  },
+  "t1": {
+    "title_prefix": "Hva er",
+    "our_solution": "Vår Løsning",
+    "p1": "Parallelt med utviklingen av T0 utvikler vi Varde T1 som skal benytte vår egenutviklede kunstige intelligens for å forutsi glukosenivåer basert på omfattende helsedata.",
+    "p2": "Appen vil gi skreddersydde anbefalinger om insulin og karbohydrater ved å ta hensyn til flere faktorer. Ved hjelp av algoritmen vil T1 tilpasse seg dine personlige faktorer, og bidra med å håndtere diabetes trygt, forutsigbart og enkelt.",
+    "p3": "Varde T1 er den endelige versjonen av løsningen vår, og vi sikter på lansering I begynnelsen av 2028.",
+    "step1_title": "Skan",
+    "step1_desc": "Ved å ta et bilde av måltidet ditt, beregner algoritmen i appen karbohydratinnholdet samtidig som den tar hensyn til andre viktige variabler som porsjonsstørrelse og mattype fra glykemisk indeks.",
+    "step2_title": "Prediker",
+    "step2_desc": "Ved å bruke disse dataene analyserer vår KI-modell glukosetrendene dine og forutsier nivåene dine opptil 4 timer frem i tid, basert på nylig aktivitet, insulinbruk, måltidsinntak og andre viktige faktorer.",
+    "step3_title": "Anbefal",
+    "step3_desc": "Vår AI gir deretter personlige anbefalinger for insulindosering tilpasset dine forventede glukosenivåer og individuelle behov."
+  }
+}
