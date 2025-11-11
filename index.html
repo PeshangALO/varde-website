@@ -30,12 +30,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
         rel="stylesheet">
+        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
 
+
 <body>
+    
     <header class="header-color" role="banner">
         <nav id="nav-container" aria-label="Main Navigation"></nav>
         <nav id="hamburger-menu" aria-label="Mobile Navigation"></nav>
+        
     </header>
 
     <main role="main">
@@ -47,13 +53,13 @@
                             loading="lazy">
                     </div>
                     <div class="hero-text-container" tabindex="-1">
-                        <h1 class="title title-text">Neste generasjons Diabetes tech</h1>
-                        <p class="coming-soon title-text">Under utvikling...</p>
+                        <h1 class="title title-text" data-i18n="home.title">Neste generasjons Diabetes tech</h1>
+                        <p class="coming-soon title-text" data-i18n="home.coming_soon">Under utvikling...</p>
                     </div>
                 </div>
                 <div class="button-container">
                     <a href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" target="_blank"
-                        aria-label="Sign up for beta access.">Registrer deg hvis du vil bli betatester!</a>
+                        aria-label="Sign up for beta access." data-i18n="home.register_beta">Registrer deg hvis du vil bli betatester!</a>
                 </div>
                 <img class="app-demo-pic" src="images/Varde-iPhone-Demo.png" alt="Varde app on iPhone"
                     alt="Varde app interface on iPhone" loading="lazy" />
@@ -63,79 +69,86 @@
             <img src="section-dividers/about-us-top-divider.svg" loading="lazy" />
         </div>
 
-        <section id="about-us" class="about" tabindex="0">
-            <div class="about-us-header-wrapper">
-                <h2 class="section-title">Om oss</h2>
-                <p class="section-description">Varde tech AS utvikler avanserte digitale løsninger for å støtte personer med diabetes i å håndtere glukosenivåene trygt, 
-                    forutsigbart og effektivt. Med en unik kombinasjon av teknologisk ekspertise og mange års personlig erfaring med diabetes, 
-                    er teamet vårt dedikert til å skape revolusjonerende verktøy som forbedrer livskvaliteten til personer med diabetes.</p>
+<section id="about-us" class="about" tabindex="0">
+    <div class="about-us-header-wrapper">
+        <h2 class="section-title" data-i18n="about.title">Om oss</h2>
+        <p class="section-description" data-i18n="about.description">
+            Varde tech AS utvikler avanserte digitale løsninger for å støtte personer med diabetes i å håndtere glukosenivåene trygt,
+            forutsigbart og effektivt. Med en unik kombinasjon av teknologisk ekspertise og mange års personlig erfaring med diabetes,
+            er teamet vårt dedikert til å skape revolusjonerende verktøy som forbedrer livskvaliteten til personer med diabetes.
+        </p>
+    </div>
 
-            </div>
-
-            <div class="about-content-container">
-                <div class="about-us-text-wrapper">
-                    <p class="about-us-number">1</p>
-                    <div class="about-text-container">
-                        <h3 id="our-goal">Vårt Mål</h3>
-                        <div class="info-detail-content-wrapper">
-                            <p>Vårt mål er å forbedre hverdagen til personer med diabetes ved å levere en intuitiv og
-                                intelligent løsning som gir bedre kontroll over glukosenivået, reduserer komplikasjoner
-                                og styrker brukerens livskvalitet.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-us-text-wrapper">
-                    <p class="about-us-number">2</p>
-                    <div class="about-text-container">
-                        <h3 id="what-is-varde">Hva er Varde T1?</h3>
-                        <div class="info-detail-content-wrapper">
-                            <p>Varde T1 er en app som benytter vår egenutviklede kunstige intelligens for å forutsi
-                                glukosenivåer basert på omfattende helsedata. Appen gir skreddersydde anbefalinger om
-                                insulin og karbohydrater, og ved å ta hensyn til flere faktorer, tilbyr den personlige
-                                innsikter som hjelper brukerne med å håndtere sin diabetes trygt og enkelt.</p>
-                        </div>
-                    </div>
+    <div class="about-content-container">
+        <div class="about-us-text-wrapper">
+            <p class="about-us-number">1</p>
+            <div class="about-text-container">
+                <h3 id="our-goal" data-i18n="about.goal_title">Vårt Mål</h3>
+                <div class="info-detail-content-wrapper">
+                    <p data-i18n="about.goal_text">
+                        Vårt mål er å forbedre hverdagen til personer med diabetes ved å levere en intuitiv og
+                        intelligent løsning som gir bedre kontroll over glukosenivået, reduserer komplikasjoner
+                        og styrker brukerens livskvalitet.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <div class="section-divider">
-            <img src="section-dividers/about-us-bottom-divider.svg" loading="lazy">
         </div>
 
-        <section id="the-team" class="team" tabindex="0" alt="Medlemmene av Varde teamet.">
-            <div class="the-team-header-wrapper">
-                <h2 class="section-title">Teamet</h2>
-                <p class="section-description">
-                    Teamet i Varde forener ekspertise fra ulike fagområder for å realisere vår visjon om å forbedre
-                    helsen til personer med diabetes, ved å tilby en innovativ KI-løsning som bidrar til å forebygge
-                    langtidskomplikasjoner.
-                </p>
+        <div class="about-us-text-wrapper">
+            <p class="about-us-number">2</p>
+            <div class="about-text-container">
+                <h3 id="what-is-varde" data-i18n="about.what_is_title">Hva er Varde T1?</h3>
+                <div class="info-detail-content-wrapper">
+                    <p data-i18n="about.what_is_text">
+                        Varde T1 er en app som benytter vår egenutviklede kunstige intelligens for å forutsi
+                        glukosenivåer basert på omfattende helsedata. Appen gir skreddersydde anbefalinger om
+                        insulin og karbohydrater, og ved å ta hensyn til flere faktorer, tilbyr den personlige
+                        innsikter som hjelper brukerne med å håndtere sin diabetes trygt og enkelt.
+                    </p>
+                </div>
             </div>
-
-            <div id="team-members">
-            </div>
-        </section>
-
-        <div class="section-divider latest-blog-divider">
-            <img src="section-dividers/the-team-bottom-divider.svg" loading="lazy">
         </div>
+    </div>
+</section>
 
-        <section id="latest-blog" tabindex="0">
-            <div class="blog-header-wrapper">
-                <h2 class="section-title">Blogg</h2>
-                <p class="section-description">Utforsk våre blogginnlegg for å lese om høydepunktene fra oss i Varde
-                    Tech.</p>
+<div class="section-divider">
+    <img src="section-dividers/about-us-bottom-divider.svg" loading="lazy">
+</div>
+
+<section id="the-team" class="team" tabindex="0" alt="Medlemmene av Varde teamet.">
+    <div class="the-team-header-wrapper">
+        <h2 class="section-title" data-i18n="team.title">Teamet</h2>
+        <p class="section-description" data-i18n="team.description">
+            Teamet i Varde forener ekspertise fra ulike fagområder for å realisere vår visjon om å forbedre
+            helsen til personer med diabetes, ved å tilby en innovativ KI-løsning som bidrar til å forebygge
+            langtidskomplikasjoner.
+        </p>
+    </div>
+
+    <div id="team-members"></div>
+</section>
+
+<div class="section-divider latest-blog-divider">
+    <img src="section-dividers/the-team-bottom-divider.svg" loading="lazy">
+</div>
+
+<section id="latest-blog" tabindex="0">
+    <div class="blog-header-wrapper">
+        <h2 class="section-title" data-i18n="nav.blog">Blogg</h2>
+        <p class="section-description" data-i18n="blog.intro">
+            Utforsk våre blogginnlegg for å lese om høydepunktene fra oss i Varde Tech.
+        </p>
+    </div>
+
 
             </div>
 
             <div class="latest-blog-container" aria-label="Click for more blog-posts.">
-                <h4>Siste:</h4>
+                <h4 data-i18n="blog.latest_label">Siste:</h4>
                 <div id="latest-blog-wrapper"></div>
             </div>
 
-            <a href="blog.html" id="read-blog-button" aria-label="Access more blogposts.">Les mer</a>
+            <a href="blog.html" id="read-blog-button" aria-label="Access more blogposts." data-i18n="blog.read_more">Les mer</a>
         </section>
 
         <section id="partners" class="partners" aria-label="Links to Varde collaborators website">
@@ -161,6 +174,7 @@
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('contact-placeholder').innerHTML = data;
+                        if (window.applyTranslations) window.applyTranslations();
                     })
                     .catch(error => console.error('Error loading contact section:', error));
             }
@@ -183,6 +197,7 @@
     <script src="./scripts/script.js?v=2"></script>
 
     <script src="./scripts/hamburgerMenu.js?v=2"></script>
+    <script src="./scripts/i18n.js?v=1"></script>
 
 </body>
 
