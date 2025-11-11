@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <ul role="menubar">
             <li class="language-switcher desktop-language-switcher" data-lang="no">
                 <select id="language-switcher" aria-label="Select Language">
-                    <option value="no">NO</option>
-                    <option value="en">EN</option>
+                   <option id="lang-no" value="no">NO</option>
+                   <option id="lang-en" value="en">EN</option>
                 </select>
+
             </li>
             <li><a class="nav-button" role="menuitem" data-i18n="nav.vardeT0" href="./VardeT0.html">Varde T0</a></li>
             <li><a class="nav-button" role="menuitem" data-i18n="nav.vardeT1" href="./VardeT1.html">Varde T1</a></li>

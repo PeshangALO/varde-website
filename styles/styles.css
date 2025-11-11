@@ -7,7 +7,7 @@
 /* Other Styles */
 html{
     scroll-behavior: smooth;
-    font-size: 135%; /* bump base size ~22px */
+    font-size: 120%; /* bump base size ~22px */
 }
 
 @media (max-width: 768px){
@@ -99,6 +99,11 @@ a{
     display: flex;
     align-items: center;
 }
+#lang-no,
+#lang-en {
+  color: black;
+}
+
 
 .language-switcher::before{
     content: "";
@@ -121,7 +126,7 @@ a{
 
 .language-switcher select{
     background: transparent;
-    color: #fff;
+    color: #ffffff;
     border: 1px solid rgba(16, 24, 40, 1);
     border-radius: 10px;
     padding: 0.5rem 0.75rem;
