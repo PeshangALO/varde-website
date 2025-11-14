@@ -1,25 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
-  i18next
-    .use(i18nextHttpBackend)
-    .use(i18nextBrowserLanguageDetector)
-    .init({
-      fallbackLng: 'no',
-      debug: false,
-      backend: {
-        loadPath: './json/{{lng}}.json'
-      },
-      detection: {
-        order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
-        caches: ['localStorage']
-      }
-    }, function(err, t) {
-      if (err) {
-        // In production we avoid noisy logs; fail gracefully
-      }
-      setHtmlLang(i18next.language);
-      syncSwitcher(i18next.language);
-      updateContent();
-    });
+i18next
+  .use(i18nextHttpBackend)
+  .use(i18nextBrowserLanguageDetector)
+  .init({
+    fallbackLng: 'no',
+    debug: false,
+    backend: {
+      loadPath: './json/{{lng}}.json'
+    },
+    detection: {
+      order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng', // ensure consistency
+    },
+    supportedLngs: ['no', 'en'],
+    load: 'languageOnly' // strip regional variants like "nb-NO"
+  }, function(err, t) {
+    if (err) console.error(err);
+    setHtmlLang(i18next.language);
+    syncSwitcher(i18next.language);
+    updateContent();
+  });
+  const langSwitcher = document.getElementById("language-switcher");
+  const mobileSwitcher = document.getElementById("language-switcher-mobile");
 
   function updateContent() {
     document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -49,15 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  const langSwitcher = document.getElementById("language-switcher");
-  if (langSwitcher) {
-    langSwitcher.addEventListener("change", (e) => {
-      const chosen = e.target.value;
-      i18next.changeLanguage(chosen, () => {
-        localStorage.setItem('i18nextLng', chosen);
-        setHtmlLang(chosen);
-        updateContent();
-      });
-    });
+  
+
   }
-});
+
+
+)  ;

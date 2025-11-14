@@ -1,4 +1,7 @@
+import { urlFor, getBlogsByLanguage, getCurrentLanguage } from "../lib/sanity.js";
+
 document.addEventListener("DOMContentLoaded", function() {
+    // 🔹 Load Team Members from JSON (still static)
     function loadTeam(lang = "no") {
         const teamJson = `./json/team.${lang}.json`;
         const employeeContainer = document.getElementById("team-members");
@@ -48,64 +51,29 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(err => console.error("Error loading team JSON:", err));
     }
 
-    function loadLatestBlog(lang = "no") {
-        fetch('./json/blogs.json')
-            .then(response => response.json())
-            .then(data => {
-                data.sort((a, b) => new Date(b.date) - new Date(a.date));
-                const firstBlogItem = data[0];
-                const blogContainer = document.getElementById('latest-blog-wrapper');
-                blogContainer.innerHTML = "";
+    // 🔹 Load Latest Blog Post from Sanity
 
-                if (firstBlogItem) {
-                    const blogItem = document.createElement('div');
-                    blogItem.classList.add('latest-blog-item');
 
-                    const blogImg = document.createElement('img');
-                    blogImg.src = firstBlogItem.image;
-                    blogImg.alt = "latest blog image";
-                    blogImg.classList.add('latest-blog-image');
+    // 🔹 Detect initial language
+    const currentLang = getCurrentLanguage();
+    loadTeam(currentLang);
+    loadLatestBlog(currentLang);
 
-                    const blogText = document.createElement("div");
-                    blogText.classList.add("latest-blog-description");
-
-                    const blogTitle = document.createElement('h2');
-                    blogTitle.textContent = firstBlogItem.title;
-
-                    const blogDescription = document.createElement('p');
-                    blogDescription.textContent = firstBlogItem.description;
-                    blogDescription.classList.add('latest-blog-description');
-
-                    const blogDate = document.createElement('h6');
-                    blogDate.textContent = new Date(firstBlogItem.date).toLocaleDateString(
-                        lang === "no" ? "no-NO" : "en-US",
-                        { year: "numeric", month: "long", day: "numeric" }
-                    );
-                    blogDate.classList.add('latest-blog-date');
-
-                    blogText.appendChild(blogTitle);
-                    blogText.appendChild(blogDescription);
-                    blogText.appendChild(blogDate);
-
-                    blogItem.appendChild(blogImg);
-                    blogItem.appendChild(blogText);
-
-                    blogContainer.appendChild(blogItem);
-                }
-            })
-            .catch(err => console.error("Error loading blog JSON:", err));
-    }
-
-    // Detect initial language
-    const lang = document.documentElement.lang || "no";
-    loadTeam(lang);
-    loadLatestBlog(lang);
-
-    // Optional: Re-load content when language changes dynamically
-    if (window.i18next) {
-        i18next.on('languageChanged', (lng) => {
-            loadTeam(lng);
-            loadLatestBlog(lng);
-        });
-    }
+    // 🔹 Re-load when language changes
+    window.addEventListener('languageChanged', (event) => {
+        const newLang = event.detail || 'no';
+        loadTeam(newLang);
+        loadLatestBlog(newLang);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamNav = document.querySelectorAll(".nav-links a");
+    hamNav.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburgerMenu.classList.remove("open");
+      mobileMenu.classList.remove("open");
+    })
+    })
+});
 });

@@ -1,59 +1,81 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('./json/blogs.json')
-        .then(response => response.json())
-        .then(data => {
-            // Sort the data by date in descending order
-            data.sort((a, b) => new Date(b.date) - new Date(a.date));
+import { urlFor, getBlogsByLanguage, getCurrentLanguage } from "../lib/sanity.js";
 
-            const blogContainer = document.getElementById('blog-container');
-            if (blogContainer) {
-                blogContainer.classList.add('blog-feed');
-            }
-            data.forEach(blog => {
-                const blogItem = document.createElement('div');
-                blogItem.classList.add('blog-item');
+document.addEventListener("DOMContentLoaded", async function () {
+  const blogContainer = document.getElementById('blog-container');
 
-                const blogImage = document.createElement('img');
-                blogImage.src = blog.image;
-                blogImage.alt = blog.title;
-                blogImage.classList.add('blog-image');
+  // Function to render blogs
+  async function renderBlogs(lang) {
+    try {
+      blogContainer.innerHTML = "";
+      const data = await getBlogsByLanguage(lang);
 
-                const blogDescription = document.createElement('div');
-                blogDescription.classList.add('blog-description');
+      if (data.length === 0) {
+        const noBlogsMsg = document.createElement('p');
+        noBlogsMsg.textContent = lang === 'no'
+          ? 'Ingen blogginnlegg funnet.'
+          : 'No blog posts found.';
+        noBlogsMsg.style.textAlign = 'center';
+        noBlogsMsg.style.padding = '2rem';
+        blogContainer.appendChild(noBlogsMsg);
+        return;
+      }
 
-                const blogTitle = document.createElement('h2');
-                blogTitle.textContent = blog.title;
+      data.forEach(blog => {
+        const blogItem = document.createElement('div');
+        blogItem.classList.add('blog-item');
 
-                const blogInfo = document.createElement("div");
-                blogInfo.classList.add("blog-info-container");
+        const blogImage = document.createElement('img');
+        blogImage.src = urlFor(blog.image).width(800).url();
+        blogImage.alt = blog.title;
+        blogImage.classList.add('blog-image');
 
-                const blogDate = document.createElement('h6');
-                blogDate.classList.add('blog-info');
-                blogDate.textContent = new Date(blog.date).toLocaleDateString('no-NO', {
-                    year: 'numeric', month: 'long', day: 'numeric'
-                });
+        const blogDescription = document.createElement('div');
+        blogDescription.classList.add('blog-description');
 
-                if (blog.photoCreds) {
-                    const pictureCred = document.createElement('h6');
-                    pictureCred.textContent = blog.photoCreds;
-                    pictureCred.classList.add('blog-info');
-                    blogInfo.appendChild(pictureCred);
-                }
+        const blogTitle = document.createElement('h2');
+        blogTitle.textContent = blog.title;
 
-                blogInfo.append(blogDate);
+        const pictureCred = document.createElement('h6');
+        pictureCred.textContent = blog.photoCreds || '';
+        pictureCred.classList.add('blog-info');
 
-                const blogText = document.createElement('p');
-                blogText.innerHTML = blog.description;
+        const blogInfo = document.createElement('div');
+        blogInfo.classList.add('blog-info-container');
 
-                blogDescription.appendChild(blogTitle);
-                blogDescription.appendChild(blogText);
-                blogDescription.appendChild(blogInfo);
+        const blogDate = document.createElement('h6');
+        blogDate.classList.add('blog-info');
+        blogDate.textContent = new Date(blog.date).toLocaleDateString(lang === 'no' ? 'no-NO' : 'en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
 
-                blogItem.appendChild(blogImage);
-                blogItem.appendChild(blogDescription);
+        blogInfo.appendChild(pictureCred);
+        blogInfo.appendChild(blogDate);
 
-                blogContainer.appendChild(blogItem);
-            });
-        })
-        .catch(error => console.log('Error fetching blog data:', error));
+        const blogText = document.createElement('p');
+        blogText.innerHTML = blog.description;
+
+        blogDescription.appendChild(blogTitle);
+        blogDescription.appendChild(blogText);
+        blogDescription.appendChild(blogInfo);
+
+        blogItem.appendChild(blogImage);
+        blogItem.appendChild(blogDescription);
+
+        blogContainer.appendChild(blogItem);
+      });
+    } catch (error) {
+      console.error('Error fetching blog data from Sanity:', error);
+    }
+  }
+
+  // Initial render
+  const currentLang = getCurrentLanguage();
+  await renderBlogs(currentLang);
+
+  // 🔥 Listen for language changes
+  window.addEventListener('languageChanged', async (event) => {
+    const newLang = event.detail;
+    await renderBlogs(newLang);
+  });
 });
+

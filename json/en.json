@@ -9,7 +9,6 @@
     "read_more": "Read more",
     "latest_label": "Latest:",
     "intro": "Explore our blog posts to read about the highlights from us at Varde Tech."
-    
   },
   "nav": {
     "vardeT0": "Varde T0",
@@ -42,7 +41,7 @@
     "title_prefix": "What is",
     "how_it_works": "How it works",
     "p1": "Varde T0 is a smart solution for those living with diabetes who want better control over glucose levels.",
-    "p2": "By connecting to existing sensors, the system provides real-time glucose readings, with customizable alerts and automatic notifications during rapid changes. Varde gives you valuable insights by visualizing glucose data, activity levels, and insulin usage — simple, safe, and always available.",
+    "p2": "By connecting to existing sensors, the system provides real-time glucose readings, with customizable alerts and automatic notifications during rapid changes. Varde gives you valuable insights by visualizing glucose data, activity levels, and insulin usage – simple, safe, and always available.",
     "p3": "T0 is the first version of our app, planned for launch around summer 2025. We are also in the process of CE marking as a SWMD according to MDR as a Class I product.",
     "step1_title": "Overview",
     "step1_desc": "Diabetes requires attention. We make it simpler through real-time readings of glucose values. You can also navigate back in time to view previous glucose levels.",

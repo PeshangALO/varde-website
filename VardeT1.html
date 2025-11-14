@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -16,60 +16,58 @@
     <meta property="og:description"
         content="Lær mer om Varde's app og algoritme som forenkler hverdagen for personer med diabetes.">
     <meta property="og:image" content="https://varde.ai/images/about-team-photo.png?v=1">
-    <meta property="og:url" content="https://varde.ai/about-varde.html">
+    <meta property="og:url" content="https://varde.ai/VardeT1.html">
     <meta property="og:type" content="website">
 
     <title>Varde - Om Varde T1</title>
     <link rel="icon" type="image/x-icon" href="./images/varde-favicon.png?v=1">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="style" href="./styles/styles.css?v=1.0.1">
+    <link rel="preload" as="style" href="./styles/vardeT.css?v=1">
+    
     <link rel="stylesheet" href="./styles/styles.css?v=1.0.1">
-    <!-- Increment if style is updated to forc hard refreach -->
     <link rel="stylesheet" href="./styles/vardeT.css?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0.1">
-    <!-- Increment if style is updated to forc hard refreach -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100..700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&family=Karma:wght@400;600&family=KoHo:wght@200;400;600&family=Montserrat+Alternates:wght@700&family=Mooli&family=Young+Serif&display=swap"
         rel="stylesheet">
-        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
-<script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
-<script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-
 </head>
 
 <body>
     <header class="header-color" role="banner">
         <nav id="nav-container" role="navigation" aria-label="Main Navigation"></nav>
-
         <nav id="hamburger-menu" aria-label="Mobile Navigation"></nav>
     </header>
 
     <main>
-        <section id="about-t1" class="about-hero-section" tabindex="0" alt=".">
+        <section id="about-t1" class="about-hero-section" tabindex="0" aria-label="Hero section for Varde T1">
             <div class="about-title-wrapper">
                 <h1 class="title-start" data-i18n="t1.title_prefix">Hva er</h1>
-                <img src="./images/varde-logo-only-text.png?v=1" alt="Varde logo, tekstbasert">
+                <img src="./images/varde-logo-only-text.png?v=1" alt="Varde" loading="eager">
                 <h1 class="title-end">T1?</h1>
             </div>            
             <div class="varde-t-text">
                 <p data-i18n="t1.p1">Parallelt med utviklingen av T0 utvikler vi Varde T1 som skal benytte vår egenutviklede kunstige intelligens for å forutsi glukosenivåer basert på omfattende helsedata.</p> 
                 
                 <p data-i18n="t1.p2">Appen vil gi skreddersydde anbefalinger om insulin og karbohydrater ved å ta hensyn til flere faktorer. Ved hjelp av algoritmen vil T1 tilpasse seg dine personlige faktorer, og bidra med å håndtere diabetes trygt, forutsigbart og enkelt.</p> 
+                
                 <p data-i18n="t1.p3">Varde T1 er den endelige versjonen av løsningen vår, og vi sikter på lansering I begynnelsen av 2028.</p>    
             </div>  
         </section>
             
         <section id="our-solution-t1">
-
             <div class="our-solution-header-wrapper" tabindex="0">
                 <h2 class="section-title" data-i18n="t1.our_solution">Vår Løsning</h2>
-                <img src="./images/varde-only-logo.png" alt="Varde logo">
+                <img src="./images/varde-only-logo.png" alt="Varde logo" loading="lazy">
             </div>
 
             <div id="the-solutions-container">
-
                 <div class="solution-wrapper">
-                    <img src="./images/scan-picture.png" alt="Bilde av måltid som skal scannes for å beregne karbohydratinnhold">
+                    <img src="./images/scan-picture.png" alt="Meal scanning interface for carbohydrate calculation" loading="lazy">
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">1.</h4>
@@ -92,11 +90,11 @@
                             <p data-i18n="t1.step2_desc">Ved å bruke disse dataene analyserer vår KI-modell glukosetrendene dine og forutsier nivåene dine opptil 4 timer frem i tid, basert på nylig aktivitet, insulinbruk, måltidsinntak og andre viktige faktorer.</p>
                         </div>
                     </div>
-                    <img src="./images/predict-picture.png" alt="Bilde som illustrerer prediksjon av glukosenivåer basert på data">
+                    <img src="./images/predict-picture.png" alt="Glucose level prediction visualization" loading="lazy">
                 </div>
 
                 <div id="final-step-solution" class="solution-wrapper">
-                    <img src="./images/recommend-picture.png" alt="Bilde som viser hvordan appen gir personlige anbefalinger for insulindosering">
+                    <img src="./images/recommend-picture.png" alt="Personalized insulin dosing recommendations" loading="lazy">
                     <div class="solution-text-wrapper" tabindex="0">
                         <div class="solution-title-container">
                             <h4 class="solution-number">3.</h4>
@@ -108,59 +106,51 @@
                     </div>
                 </div>
 
-                <a id="beta-user-button" href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" aria-label="Bli beta tester for Varde" data-i18n="common.beta_cta">Bli beta tester</a>
+                <a id="beta-user-button" href="https://forms.gle/gB3sK4CWsfkgnF6h9" class="beta-button" target="_blank" rel="noopener" 
+                   aria-label="Bli beta tester for Varde" data-i18n="common.beta_cta">Bli beta tester</a>
             </div>
             
             <div id="bottom-logo">
-                <img src="./images/transparent-logo-purple.png">
+                <img src="./images/transparent-logo-purple.png" alt="" loading="lazy">
             </div>
         </section>
 
         <section id="partners" class="partners" aria-label="Links to Varde collaborators website">
             <div class="partners-container">
-                <a href="https://www.innovasjonnorge.no" target="_blank">
-                    <img src="images/IN_Logo_Eng.png" alt="Logo for Innovasjon Norge, partner" class="partner-logo">
+                <a href="https://www.innovasjonnorge.no" target="_blank" rel="noopener">
+                    <img src="images/IN_Logo_Eng.png" alt="Innovation Norway Logo" class="partner-logo" loading="lazy">
                 </a>
-                <a href="https://www.innoventussor.no" target="_blank" >
-                    <img src="images/innoventus_sør_logo.png" alt="Logo for Innoventus Sør, partner" class="partner-logo">
+                <a href="https://www.innoventussor.no" target="_blank" rel="noopener">
+                    <img src="images/innoventus_sør_logo.png" alt="Innoventus Sør Logo" class="partner-logo" loading="lazy">
                 </a>
-                <a href="https://uia.no" target="_blank">
-                    <img src="images/logoUiA.png" alt="Logo for Universitetet i Agder, partner" class="partner-logo">
+                <a href="https://uia.no" target="_blank" rel="noopener">
+                    <img src="images/logoUiA.png" alt="University of Agder Logo" class="partner-logo" loading="lazy">
                 </a>
             </div>
         </section>
 
         <!-- Placeholder for the contact section -->
         <div id="contact-placeholder"></div>
-
-        <script>
-            // Function to load the contact section
-            function loadContactSection() {
-                fetch('contact.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('contact-placeholder').innerHTML = data;
-                        if (window.applyTranslations) window.applyTranslations();
-                    })
-                    .catch(error => console.error('Error loading contact section:', error));
-            }
-
-            // Load the contact section when the page loads
-            window.onload = loadContactSection;
-        </script>
     </main>
+    
     <footer>
         <div class="social-media">
-            <a href="https://www.linkedin.com/company/varde" target="_blank" class="social-link"
+            <a href="https://www.linkedin.com/company/varde" target="_blank" rel="noopener" class="social-link"
                 aria-label="Visit Varde on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
         <p id="copyright"></p>
     </footer>
-    <script src="./scripts/script.js?v=2"></script>
-    <script src="./scripts/hamburgerMenu.js?v=2"></script>
-    <script src="./scripts/i18n.js?v=1"></script>
+    
+    <!-- Load scripts -->
+    <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/i18n.js"></script>
+    <script src="./scripts/loadContact.js"></script>
 </body>
 
 </html>
